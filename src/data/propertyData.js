@@ -13,7 +13,9 @@ export const propertiesInfo = [
     noOfGarages: 1,
     propertyArea: 1500,
     isFeatured: true,
-    coverBg: 'prop1cover.jpg',
+    coverBg: 'prop-1-cover.jpg',
+    moreFeatures: ['Air Conditioning', 'Balcony', 'Broadband', 'Dining', 'Ground'],
+    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"]
   },
   {
     _id: 2,
@@ -29,7 +31,9 @@ export const propertiesInfo = [
     noOfGarages: 1,
     propertyArea: 1500,
     isFeatured: false,
-    coverBg: 'prop1cover.jpg',
+    coverBg: 'prop-2-cover.jpg',
+    moreFeatures: ['Air Conditioning', 'Balcony', 'Broadband', 'Dining', 'Ground'],
+    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"]
   },
   {
     _id: 3,
@@ -45,7 +49,9 @@ export const propertiesInfo = [
     noOfGarages: 2,
     propertyArea: 1500,
     isFeatured: true,
-    coverBg: 'prop1cover.jpg'
+    coverBg: 'prop-3-cover.jpg',
+    moreFeatures: ['Air Conditioning', 'Balcony', 'Broadband', 'Dining', 'Ground'],
+    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"]
   },
   {
     _id: 4,
@@ -61,10 +67,25 @@ export const propertiesInfo = [
     noOfGarages: 1,
     propertyArea: 1500,
     isFeatured: true,
-    coverBg: 'prop1cover.jpg'
+    coverBg: 'prop-4-cover.jpg',
+    moreFeatures: ['Air Conditioning', 'Balcony', 'Broadband', 'Dining', 'Ground'],
+    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"]
   },
-  { _id: 5, image: '/images/properties/prop5.jpg', title: '423/1 Phillip Street, Petersham, NSW 2049', isRent: true, monthlyRent: 700, buyingPrice: 0, location: ' Melbourne, Vic 3000', noOfBeds: 4, noOfBathrooms: 2, propertyArea: 1500, isFeatured: true,
-  coverBg: 'prop1cover.jpg' },
+  { _id: 5, 
+    image: '/images/properties/prop5.jpg', 
+    title: '423/1 Phillip Street, Petersham, NSW 2049', 
+    isRent: true, 
+    monthlyRent: 700, 
+    buyingPrice: 0, 
+    location: ' Melbourne, Vic 3000', 
+    noOfBeds: 4, 
+    noOfBathrooms: 2, 
+    propertyArea: 1500, 
+    isFeatured: true, 
+    coverBg: 'prop-5-cover.jpg', 
+    moreFeatures: ['Air Conditioning', 'Balcony', 'Broadband', 'Dining', 'Ground'],
+    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"]
+   },
   {
     _id: 6,
     image: '/images/properties/prop1.jpg',
@@ -79,6 +100,8 @@ export const propertiesInfo = [
     noOfGarages: 2,
     propertyArea: 1500,
     isFeatured: true,
-    coverBg: 'prop1cover.jpg'
-  }
+    coverBg: 'prop-6-cover.jpg',
+    moreFeatures: ["Air Conditioning", "Balcony", "Broadband", "Dining", "Ground" ],
+    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"]
+  },
 ];

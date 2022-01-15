@@ -143,13 +143,13 @@ p {
   background: var(--colorSecondary);
 }
 .bg--center {
-  background-position: center center;
+  background-position: center center!important;
 }
 .bg--cover {
-  background-size: cover;
+  background-size: cover!important;
 }
 .bg--no-repeat {
-  background-repeat: no-repeat;
+  background-repeat: no-repeat!important;
 }
 .site-content {
   margin: 5rem 0 0 0;

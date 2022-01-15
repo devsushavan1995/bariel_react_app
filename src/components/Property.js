@@ -5,9 +5,9 @@ function Property(props) {
   return (
     <div className='col-12 col-sm-6 col-md-6 col-lg-4'>
       <div className='property'>
-        <Link to={`/properties/${props.data._id}`}>
+        <Link to={`/properties/${props.data._id}`} className='d-block'>
           <div className='property__image-container'>
-            <img src={props.data.image} alt='' />
+            <img src={props.data.image} alt='' className='w-100'/>
             <div className='property__top-data d-flex justify-content-between align-items-center'>
               <h4 className='property__price text--light'>
                 <span class='price__prefix'>$</span>

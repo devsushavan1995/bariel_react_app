@@ -1,4 +1,41 @@
+.site-content.site-content--properties .page-title-section {
+  background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.5)),  url('/public/images/property-page-bg.jpg')!important;
+}
 /* Property Single Page */
+.property-single .property__top-overview .overview__spec .overview__spec-item {
+  color: #fff;
+  margin-right: 2.5rem;
+}
+.property-single .property__top-overview .overview__spec .overview__spec-item span {
+  font-size: 1.25rem;
+}
+.property-single .property__top-overview .overview__spec .overview__spec-item span.spec-item__icon {
+  margin-right: 0.75rem;
+} 
+.property-single .property__top-overview .overview__spec .overview__spec-item span.spec-item__text {
+  margin-right: 0.25rem;
+} 
+.property-single .property__top-overview .overview__pricing .pricing-container {
+  font-size: 2.25rem;
+  color: #fff;
+  margin-right: 1.25rem;
+}
+.property-single .property__top-overview .overview__pricing .overview__tag {
+  background: var(--colorSecondary);
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+}
+.property-single .swiper-button-next, 
+.property-single  .swiper-button-prev {
+    padding: 0.75rem 1.25rem;
+    color: #fff;
+    background: var(--colorPrimary);
+}
+.property-single .swiper-button-next::after, 
+.property-single  .swiper-button-prev::after {
+  font-size: 1.25rem;
+}
 .property-single .property-single__desc > ul {
   background: var(--colorLightBg);
   border: none;
@@ -15,12 +52,15 @@
 .property-single .property-single__desc .nav-tabs .nav-link {
   color: var(--colorHeading);
   border-radius: 0;
+  margin:0;
+  border:none;
 }
 .property-single .property-single__desc .nav-tabs .nav-item.show .nav-link, 
 .property-single .property-single__desc .nav-tabs .nav-link.active {
   border: none;
   background: var(--colorSecondary);
   color: #fff;
+  margin:0;
 }
 .property-single .amenities-features-wrapper .font-weight-medium {
   font-weight: 500!important;
@@ -28,6 +68,13 @@
 .property-single .agent-profile__contact .agent-profile__contact-icon,
 .property-single .profile-cta__btn .profile-cta__btn-icon {
   margin-right: 0.5rem;
+}
+.property-single .property-single__more-features .more-featured-container .more-feature__icon {
+  margin-right: 0.5rem;
+}
+.property-single .agent-details-wrapper {
+  position: sticky;
+  top: 110px;
 }
 /* Contact Page */
 .site-content--contact-us .section__heading,

@@ -24,3 +24,10 @@
     background: var(--colorSecondary);
     color: #fff;
 }
+.hero-slider .slide-container .slide__bg {
+  transform: scale(1.05);
+  transition: all 5s ease;
+}
+.hero-slider .swiper-slide-active .slide-container .slide__bg {
+  transform: scale(1);
+}

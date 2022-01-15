@@ -1,13 +1,14 @@
 import React from 'react';
 import Pagetitle from '../components/Pagetitle';
 import '../css/Pagetitle.css';
+import '../css/Pages.css';
 import Property from '../components/Property';
 import * as propertyData from '../data/propertyData';
 
 function Properties() {
   return (
-    <div className='site-content'>
-      <Pagetitle title='properties' />
+    <div className='site-content site-content--properties'>
+      <Pagetitle title='properties' style="{backgroundImage: url('/images/properties-page-bg.jpg')}"/>
       <section className='section--padding'>
         <div className='container'>
           <div className='row'>

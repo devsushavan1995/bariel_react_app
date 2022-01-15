@@ -2,12 +2,15 @@ import React from 'react';
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import * as propertyData from '../data/propertyData';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import '../css/PropertySingle.css';
 import '../css/Pages.css';
 import { Tabs, Tab } from 'react-bootstrap';
+import PropertySingleSlide from '../components/PropertySingleSlide';
 import ContactForm from '../components/ContactForm';
+import PropertyMoreFeatureSingle from '../components/PropertyMoreFeatureSingle';
+import Property from '../components/Property';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -21,37 +24,42 @@ function PropertySingle(props) {
   const property = propertyData.propertiesInfo.find(x => {
     return x._id === id;
   });
-  console.log(property);
   if (!property) {
     return <div>Property not found</div>;
   }
+  let propertyTitle = property.title;
+  let setCountMaxRecentlyAddedItems = 3;
+  let count = 0;
   return (
     <div className='property-single'>
       <section className='property__top-overview bg--center bg--cover bg--no-repeat' style={{ backgroundImage: `url(/images/properties/${property.coverBg})` }}>
         <div className='overview__overlay'></div>
         <div className='overview__content'>
-          <h2 className='overview__title text--light'>{property.title}</h2>
+          <h3 className='overview__title text--light mb-3'>{property.title}</h3>
           <ul className='overview__spec d-flex justify-content-center'>
             <li className='overview__spec-item'>
               <span className='spec-item__icon'>
                 <i className='fas fa-bed'></i>
               </span>
               <span className='spec-item__text'>{property.noOfBeds}</span>
+              <span className="spec-item__title">Beds</span>
             </li>
             <li className='overview__spec-item'>
               <span className='spec-item__icon'>
                 <i className='fas fa-bath'></i>
               </span>
               <span className='spec-item__text'>{property.noOfBathrooms}</span>
+              <span className="spec-item__title">Baths</span>
             </li>
             <li className='overview__spec-item'>
               <span className='spec-item__icon'>
                 <i className='fas fa-home'></i>
               </span>
               <span className='spec-item__text'>{property.propertyArea}</span>
+              <span className="spec-item__title">sqft</span>
             </li>
           </ul>
-          <div className='overview__pricing d-flex justify-content-center'>
+          <div className='overview__pricing d-flex justify-content-center align-items-center'>
             <span className='pricing-container d-flex'>
               <span className='pricing__currency'>$</span>
               <span className='pricing__value'>{property.isRent ? property.monthlyRent : property.buyingPrice}</span>
@@ -68,7 +76,7 @@ function PropertySingle(props) {
               <Swiper
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
-                spaceBetween={50}
+                spaceBetween={20}
                 slidesPerView={1}
                 navigation={true}
                 pagination={false}
@@ -81,18 +89,7 @@ function PropertySingle(props) {
                 className='mb-5'
               >
                 <div className='swiper-wrapper'>
-                  <SwiperSlide>
-                    <img src='/images/dummy-800x400.png' alt='' />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src='/images/dummy-800x400.png' alt='' />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src='/images/dummy-800x400.png' alt='' />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src='/images/dummy-800x400.png' alt='' />
-                  </SwiperSlide>
+                  {property.gallery.map((slide)=> <PropertySingleSlide slide={slide}/>)}
                 </div>
               </Swiper>
               <Tabs id='controlled-tab-example' defaultActiveKey='description' activeKey={key} onSelect={k => setKey(k)} className='mb-4'>
@@ -109,74 +106,73 @@ function PropertySingle(props) {
                             <p className='text--sm font-weight-medium'>Property Size</p>
                           </div>
                           <div className='col-6'>
-                            <p className='text--sm text--secondary'>1500sqft</p>
+                            <p className='text--sm text--secondary'>{`${property.propertyArea} sqft`}</p>
                           </div>
                         </div>
                       </div>
                       <div className='col-12 col-md-6 col-lg-6 mb-2'>
                         <div className='row'>
                           <div className='col-6'>
-                            <p className='text--sm font-weight-medium'>Property Size</p>
+                            <p className='text--sm font-weight-medium'>Total Rooms</p>
                           </div>
                           <div className='col-6'>
-                            <p className='text--sm text--secondary'>1500sqft</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className='col-12 col-md-6 col-lg-6 mb-2'>
-                        <div className='row'>
-                          <div className='col-6'>
-                            <p className='text--sm font-weight-medium'>Property Size</p>
-                          </div>
-                          <div className='col-6'>
-                            <p className='text--sm text--secondary'>1500sqft</p>
+                            <p className='text--sm text--secondary'>{property.noOfRooms}</p>
                           </div>
                         </div>
                       </div>
                       <div className='col-12 col-md-6 col-lg-6 mb-2'>
                         <div className='row'>
                           <div className='col-6'>
-                            <p className='text--sm font-weight-medium'>Property Size</p>
+                            <p className='text--sm font-weight-medium'>Bedrooms</p>
                           </div>
                           <div className='col-6'>
-                            <p className='text--sm text--secondary'>1500sqft</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className='col-12 col-md-6 col-lg-6 mb-2'>
-                        <div className='row'>
-                          <div className='col-6'>
-                            <p className='text--sm font-weight-medium'>Property Size</p>
-                          </div>
-                          <div className='col-6'>
-                            <p className='text--sm text--secondary'>1500sqft</p>
+                            <p className='text--sm text--secondary'>{property.noOfRooms}</p>
                           </div>
                         </div>
                       </div>
                       <div className='col-12 col-md-6 col-lg-6 mb-2'>
                         <div className='row'>
                           <div className='col-6'>
-                            <p className='text--sm font-weight-medium'>Property Size</p>
+                            <p className='text--sm font-weight-medium'>Bathrooms</p>
                           </div>
                           <div className='col-6'>
-                            <p className='text--sm text--secondary'>1500sqft</p>
+                            <p className='text--sm text--secondary'>{property.noOfBathrooms}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className='col-12 col-md-6 col-lg-6 mb-2'>
+                        <div className='row'>
+                          <div className='col-6'>
+                            <p className='text--sm font-weight-medium'>Garage</p>
+                          </div>
+                          <div className='col-6'>
+                            <p className='text--sm text--secondary'>{property.noOfGarages}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className='col-12 col-md-6 col-lg-6 mb-2'>
+                        <div className='row'>
+                          <div className='col-6'>
+                            <p className='text--sm font-weight-medium'>Year of Build</p>
+                          </div>
+                          <div className='col-6'>
+                            <p className='text--sm text--secondary'>2021</p>
                           </div>
                         </div>
                       </div>
                     </div>
                     <h5 className='text--heading my-5'>More Features</h5>
-                    <ul className="property-single__more-features">
-                      <div className="row">
-                        <div className="col-6 col-md-4 col-lg-4 mb-2">
-                          <div className="more-featured-container">
-                            <span className="more-feature__icon text--secondary text--sm"><i class="fas fa-check"></i></span>
-                            <span className="more-feature__text text--heading text--sm">Featured 1</span>
-                          </div>
-                        </div>
+                    <ul className='property-single__more-features'>
+                      <div className='row'>
+                        {property.moreFeatures.map((feature) => (
+                          <PropertyMoreFeatureSingle feature={feature} />
+                        ))}
                       </div>
                     </ul>
                     <h5 className='text--heading my-5'>Floor Plan</h5>
-                    <p><img src="/images/dummy-800x400.png" alt="" /></p>
+                    <p>
+                      <img src='/images/dummy-800x400.png' alt='' />
+                    </p>
                   </div>
                 </Tab>
               </Tabs>
@@ -227,6 +223,20 @@ function PropertySingle(props) {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className='section--padding bg--light'>
+        <div className='container'>
+          <p className='section__subheading text--secondary text-left'>More Properties</p>
+          <h2 className='section__heading text--heading'>Recently Added</h2>
+          <div className='row'>
+            {propertyData.propertiesInfo.filter((propa) => propa.title !== propertyTitle).map((property,index) => {
+              if(count < setCountMaxRecentlyAddedItems){
+                count++;
+                return <Property data={property} />; 
+              }
+            })}
           </div>
         </div>
       </section>

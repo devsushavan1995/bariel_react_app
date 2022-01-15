@@ -1,7 +1,7 @@
 import React from 'react';
 // import Swiper core and required modules
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper} from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade } from 'swiper';
 import HeroSlideSingle from './HeroSlideSingle';
 import * as propertyData from '../data/propertyData';
 // Import Swiper styles
@@ -9,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'swiper/css/effect-fade';
 import '../css/HeroSlider.css';
 function HeroSlider() {
   let counter = [];
@@ -17,7 +18,9 @@ function HeroSlider() {
     <div className='hero-slider'>
       <Swiper
         // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade]}
+        effect="fade"
+        autoplay={{delay: 5000}}
         spaceBetween={50}
         slidesPerView={1}
         navigation={false}

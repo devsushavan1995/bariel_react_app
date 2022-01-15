@@ -36,9 +36,9 @@ function Header() {
                   <li className='main-nav-menu__item'>
                     <Link to='/about-us'>About Us</Link>
                   </li>
-                  <li className='main-nav-menu__item'>
+                  {/* <li className='main-nav-menu__item'>
                     <Link to='/blog'>Blog</Link>
-                  </li>
+                  </li> */}
                   <li className='main-nav-menu__item'>
                     <Link to='/contact-us'>Contact Us</Link>
                   </li>
