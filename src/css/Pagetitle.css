@@ -1,0 +1,11 @@
+.page-title-section {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--colorPrimary);
+}
+.page-title-section .page-title {
+  text-transform: capitalize;
+  color: #fff;
+}
