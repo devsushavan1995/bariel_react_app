@@ -5,6 +5,8 @@ import * as propertyData from '../data/propertyData';
 import Property from '../components/Property';
 import { Link } from 'react-router-dom';
 import Testimonials from '../components/Testimonials';
+import * as AgentsInfo from '../data/agentsData';
+import Agent from '../components/Agent';
 
 function Home() {
   // console.log(propertyData);
@@ -97,13 +99,23 @@ function Home() {
       {/* Agents section */}
       <section className='section--padding-bottom-only'>
         <div className='container'>
-          <div className='row'>
-            <div className='col-12 col-md-12 col-lg-5'>
+          <div className='row mb-5 align-items-center'>
+            <div className='col-12 col-md-12 col-lg-6'>
               <p className='section__subheading text--secondary'>Our Agents</p>
               <h3 className='text--heading'>Take help to choose your property by our agents</h3>
             </div>
-            <div className='col-12 col-md-12 col-lg-7'></div>
-          </div>
+            <div className='col-12 col-md-12 col-lg-6 d-flex justify-content-end'>
+              <Link to="/agents" class="btn__secondary d-inline-block">View All</Link>
+            </div>
+            </div>
+              <div className='row'>
+                {AgentsInfo.agentsData.map((agent,index) => {
+                  if(index < 4) {
+                    return <Agent agent={agent} />;
+                  }
+                }
+                )}
+              </div>
         </div>
       </section>
       {/* Family/Commercial section */}
@@ -144,7 +156,7 @@ function Home() {
         <div className='container'>
           <p className='section__subheading text--secondary text-center'>Feedback</p>
           <h2 className='section__heading text--heading text-center'>Happy Clients</h2>
-          <Testimonials/>
+          <Testimonials />
         </div>
       </section>
       {/* Blog section */}

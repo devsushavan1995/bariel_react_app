@@ -4,7 +4,7 @@ import '../css/Property.css';
 function Property(props) {
   return (
     <div className='col-12 col-sm-6 col-md-6 col-lg-4'>
-      <div className='property'>
+      <div className='property bg--light-white'>
         <Link to={`/properties/${props.data._id}`} className='d-block'>
           <div className='property__image-container'>
             <img src={props.data.image} alt='' className='w-100'/>

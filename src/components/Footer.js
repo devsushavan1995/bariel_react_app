@@ -43,30 +43,36 @@ function Footer() {
                 </div>
               </div>
               <div className='col-12 col-md-6 col-lg-3'>
-              <h5 className="text--light">Important Links</h5>
-              <ul className='footer__menu'>
-                <li className="footer__menu-item">
-                  <Link to="/">Properties</Link>
-                </li>
-                <li className="footer__menu-item">
-                  <Link to="/">About Us</Link>
-                </li>
-                <li className="footer__menu-item">
-                  <Link to="/">Terms of Use</Link>
-                </li>
-                <li className="footer__menu-item">
-                  <Link to="/">Privacy Policy</Link>
-                </li>
-              </ul>
+                <h5 className='text--light'>Important Links</h5>
+                <ul className='footer__menu'>
+                  <li className='footer__menu-item'>
+                    <Link to='/properties'>Properties</Link>
+                  </li>
+                  <li className='footer__menu-item'>
+                    <Link to='/about-us'>About Us</Link>
+                  </li>
+                  <li className='footer__menu-item'>
+                    <Link to='/'>Terms of Use</Link>
+                  </li>
+                  <li className='footer__menu-item'>
+                    <Link to='/'>Privacy Policy</Link>
+                  </li>
+                </ul>
               </div>
               <div className='col-12 col-md-6 col-lg-3'>
-              <h5 className="text--light">Contact Us</h5>
-              <div className='footer__contact'>
-                <p className="text--light">Send Us Email<br />
-                <a href="mailto:contact@company.com">contact@company.com</a></p>
-                <p className="text--light">Call Us<br />
-                <a href="tel:+1234567890">+1234567890</a></p>
-              </div>
+                <h5 className='text--light'>Contact Us</h5>
+                <div className='footer__contact'>
+                  <p className='text--light'>
+                    Send Us Email
+                    <br />
+                    <a href='mailto:contact@company.com'>contact@company.com</a>
+                  </p>
+                  <p className='text--light'>
+                    Call Us
+                    <br />
+                    <a href='tel:+1234567890'>+1234567890</a>
+                  </p>
+                </div>
               </div>
             </div>
           </Container>
