@@ -4,7 +4,7 @@ import '../css/Agent.css';
 function Agent(props) {
 let  agent = props.agent;
   return (
-    <div className='col-12 col-md-3 col-lg-3'>
+    <div className='col-12 col-md-6 col-lg-3'>
       <div className='agent position-relative overflow-hidden'>
         <div className='agent__profile-image-container'>
           <img src={`/images/agents/${agent.image}`} alt='' />

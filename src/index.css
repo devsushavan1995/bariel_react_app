@@ -50,6 +50,7 @@ button {
 }
 .btn__primary:hover {
   background: var(--colorSecondary);
+  color: #fff;
 }
 .btn__secondary {
   background: var(--colorSecondary);

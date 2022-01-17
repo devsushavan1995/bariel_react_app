@@ -15,7 +15,8 @@ export const propertiesInfo = [
     isFeatured: true,
     coverBg: 'prop-1-cover.jpg',
     moreFeatures: ['Air Conditioning', 'Balcony', 'Broadband', 'Dining', 'Ground'],
-    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"]
+    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"],
+    agentId: 1
   },
   {
     _id: 2,
@@ -33,7 +34,8 @@ export const propertiesInfo = [
     isFeatured: false,
     coverBg: 'prop-2-cover.jpg',
     moreFeatures: ['Air Conditioning', 'Balcony', 'Broadband', 'Dining', 'Ground'],
-    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"]
+    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"],
+    agentId: 4
   },
   {
     _id: 3,
@@ -51,7 +53,8 @@ export const propertiesInfo = [
     isFeatured: true,
     coverBg: 'prop-3-cover.jpg',
     moreFeatures: ['Air Conditioning', 'Balcony', 'Broadband', 'Dining', 'Ground'],
-    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"]
+    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"],
+    agentId: 3
   },
   {
     _id: 4,
@@ -69,7 +72,8 @@ export const propertiesInfo = [
     isFeatured: true,
     coverBg: 'prop-4-cover.jpg',
     moreFeatures: ['Air Conditioning', 'Balcony', 'Broadband', 'Dining', 'Ground'],
-    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"]
+    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"],
+    agentId: 3,
   },
   { _id: 5, 
     image: '/images/properties/prop5.jpg', 
@@ -84,7 +88,8 @@ export const propertiesInfo = [
     isFeatured: true, 
     coverBg: 'prop-5-cover.jpg', 
     moreFeatures: ['Air Conditioning', 'Balcony', 'Broadband', 'Dining', 'Ground'],
-    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"]
+    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"],
+    agentId: 2
    },
   {
     _id: 6,
@@ -102,6 +107,7 @@ export const propertiesInfo = [
     isFeatured: true,
     coverBg: 'prop-6-cover.jpg',
     moreFeatures: ["Air Conditioning", "Balcony", "Broadband", "Dining", "Ground" ],
-    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"]
+    gallery: ["dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png", "dummy-800x400.png"],
+    agentId: 4
   },
 ];

@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import * as propertyData from '../data/propertyData';
+import * as AgentsInfo from '../data/agentsData';
 import { Swiper } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import '../css/PropertySingle.css';
@@ -30,6 +31,7 @@ function PropertySingle(props) {
   let propertyTitle = property.title;
   let setCountMaxRecentlyAddedItems = 3;
   let count = 0;
+  const agentInfo = AgentsInfo.agentsData.filter((agentSingle) => agentSingle._id === property._id);
   return (
     <div className='property-single'>
       <section className='property__top-overview bg--center bg--cover bg--no-repeat' style={{ backgroundImage: `url(/images/properties/${property.coverBg})` }}>
@@ -185,40 +187,40 @@ function PropertySingle(props) {
               <div className='agent-details-wrapper p-3 p-md-4 p-lg-5 bg--light'>
                 <div className='agent-profile-container'>
                   <div className='agent-profile__image'>
-                    <img src='/images/agents/munica-regoni.jpg' alt='' className='mx-auto rounded-circle mb-4' />
+                    <img src={`/images/agents/${agentInfo[0].image}`} alt='' className='mx-auto rounded-circle mb-4' width="200"/>
                   </div>
                   <div className='agent-profile__content'>
-                    <h5 className='agent-profile__title text--heading text-center mb-3'>Munia Regoni</h5>
+                    <h5 className='agent-profile__title text--heading text-center mb-3'>{agentInfo[0].title}</h5>
                     <p className='agent-profile__contact d-flex justify-content-center'>
                       <span className='agent-profile__contact-icon text--secondary'>
                         <i className='fas fa-phone-alt'></i>
                       </span>
-                      <span className='agent-profile__contact-details text--secondary'>+123 4567890</span>
+                      <span className='agent-profile__contact-details text--secondary'>{agentInfo[0].phone}</span>
                     </p>
                     <p className='agent-profile__contact d-flex justify-content-center'>
                       <span className='agent-profile__contact-icon text--secondary'>
                         <i class='fas fa-envelope'></i>
                       </span>
-                      <span className='agent-profile__contact-details text--secondary'>contact@agentname.com</span>
+                      <span className='agent-profile__contact-details text--secondary'>{agentInfo[0].email}</span>
                     </p>
                   </div>
                 </div>
                 <div className='agent-profile-cta-container'>
                   <p className='agent-profile-cta'>
-                    <Link to='/' className='profile-cta__btn btn__secondary d-block w-100 text-center'>
+                    <a href={`tel:${agentInfo[0].phone}`} className='profile-cta__btn btn__secondary d-block w-100 text-center'>
                       <span className='profile-cta__btn-icon'>
                         <i className='fas fa-phone-alt'></i>
                       </span>
                       <span className='profile-cta__btn-text'>Call The Agent Now</span>
-                    </Link>
+                    </a>
                   </p>
                   <p className='agent-profile-cta'>
-                    <button className='profile-cta__btn btn__primary d-block w-100 text-center'>
+                    <Link to="/contact-us" className='profile-cta__btn btn__primary d-block w-100 text-center'>
                       <span className='profile-cta__btn-icon'>
                         <i class='fas fa-envelope'></i>
                       </span>
                       <span className='profile-cta__btn-text'>Get In Touch</span>
-                    </button>
+                    </Link>
                   </p>
                 </div>
               </div>
