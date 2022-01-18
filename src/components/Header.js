@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import '../css/Header.css';
 import { Offcanvas , Button } from 'react-bootstrap';
 
@@ -20,32 +20,39 @@ function Header() {
                 <img src='/images/logo.png' alt='logo' width='150' />
               </Link>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+            <div>
+            <button className='header__cta-btn--find-property text--heading bg--transparent p-0 d-lg-none' onClick={handleShow}>
+              <span className='btn__icon'>
+                <i class='fas fa-search'></i>
+              </span>
+            </button>
+            <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
             <Navbar.Collapse id='responsive-navbar-nav' className='justify-content-center'>
               <Nav>
                 <ul className='main-nav-menu d-lg-flex'>
                   <li className='main-nav-menu__item'>
-                    <Link to='/'>Home</Link>
+                    <NavLink exact activeClassName="active" to='/'>Home</NavLink>
                   </li>
                   <li className='main-nav-menu__item'>
-                    <Link to='/properties'>Properties</Link>
+                    <NavLink activeClassName="active" to='/properties'>Properties</NavLink>
                   </li>
                   <li className='main-nav-menu__item'>
-                    <Link to='/agents'>Agents</Link>
+                    <NavLink activeClassName="active" to='/agents'>Agents</NavLink>
                   </li>
                   <li className='main-nav-menu__item'>
-                    <Link to='/about-us'>About Us</Link>
+                    <NavLink activeClassName="active" to='/about-us'>About Us</NavLink>
                   </li>
                   {/* <li className='main-nav-menu__item'>
                     <Link to='/blog'>Blog</Link>
                   </li> */}
                   <li className='main-nav-menu__item'>
-                    <Link to='/contact-us'>Contact Us</Link>
+                    <NavLink activeClassName="active" to='/contact-us'>Contact Us</NavLink>
                   </li>
                 </ul>
               </Nav>
             </Navbar.Collapse>
-            <button className='btn__primary' onClick={handleShow}>
+            </div>
+            <button className='btn__primary d-none d-lg-inline-block' onClick={handleShow}>
               <span className='btn__icon'>
                 <i class='fas fa-search'></i>
               </span>

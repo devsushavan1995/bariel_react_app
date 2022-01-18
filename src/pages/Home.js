@@ -61,21 +61,21 @@ function Home() {
       {/* About section */}
       <section className='section--padding about-section bg--center bg--cover bg--no-repeat'>
         <div className='container'>
-          <div className='row align-items-center'>
-            <div className='col-6 col-sm-12 col-md-12 col-lg-6'>
+          <div className='row align-items-center text--center text--lg-left'>
+            <div className='col-12 col-sm-12 col-md-12 col-lg-6'>
               <p className='section__subheading text--secondary'>We are Bariel</p>
               <h3 className='text--heading'>Common Sense Solutions For All Aspects Of Commercial Property, Development Land.</h3>
-              <p className='mt-4'>
+              <p className='mt-4 mb-5 mb-lg-0'>
                 <Link to='/contact-us' className='btn__secondary d-inline-block'>
                   Contact Us Now
                 </Link>
               </p>
             </div>
-            <div className='col-6 col-sm-12 col-md-12 col-lg-6'>
+            <div className='col-12 col-sm-12 col-md-12 col-lg-6'>
               <p className='text--para mb-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
               <p className='text--para mb-4'>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
               <p>
-                <img src='/images/about-sign-1.png' alt='' width='200' />
+                <img src='/images/about-sign-1.png' alt='' width='200' className='d-inline-block' />
               </p>
               <p className='text--secondary text--sm'>John Doe, Founder</p>
             </div>
@@ -99,13 +99,13 @@ function Home() {
       {/* Agents section */}
       <section className='section--padding-bottom-only'>
         <div className='container'>
-          <div className='row mb-5 align-items-center'>
+          <div className='row mb-5 align-items-center text--center text--lg-left'>
             <div className='col-12 col-md-12 col-lg-6'>
               <p className='section__subheading text--secondary'>Our Agents</p>
               <h3 className='text--heading'>Take help to choose your property by our agents</h3>
             </div>
-            <div className='col-12 col-md-12 col-lg-6 d-flex justify-content-end'>
-              <Link to="/agents" class="btn__secondary d-inline-block">View All</Link>
+            <div className='col-12 col-md-12 col-lg-6 d-flex justify-content-center justify-content-lg-end'>
+              <Link to="/agents" class="btn__secondary d-inline-block mt-4 mt-lg-0">View All</Link>
             </div>
             </div>
               <div className='row'>

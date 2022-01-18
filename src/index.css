@@ -73,27 +73,27 @@ h6 {
   font-weight: 700 !important;
 }
 h1 {
-  font-size: 4rem!important;
-  line-height: 1.05em!important;
-}
-h2 {
-  font-size: 3rem!important;
-  line-height: 1.1em!important;
-}
-h3 {
-  font-size: 2.5rem!important;
+  font-size: 2.75rem!important;
   line-height: 1.15em!important;
 }
+h2 {
+  font-size: 2.25rem!important;
+  line-height: 1.2em!important;
+}
+h3 {
+  font-size: 2rem!important;
+  line-height: 1.2em!important;
+}
 h4 {
-  font-size: 1.875rem!important;
+  font-size: 1.5rem!important;
   line-height: 1.25em!important;
 }
 h5 {
-  font-size: 1.45rem!important;
-  line-height: 1.3em!important;
+  font-size: 1.35rem!important;
+  line-height: 1.35em!important;
 }
 h6 {
-  font-size: 1.25rem!important;
+  font-size: 1.15rem!important;
   line-height: 1.4em!important;
 }
 p {
@@ -102,6 +102,59 @@ p {
   font-family: var(--fontPara);
   font-weight: 400;
 }
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.25rem!important;
+    line-height: 1.1em!important;
+  }
+  h2 {
+    font-size: 2.65rem!important;
+    line-height: 1.15em!important;
+  }
+  h3 {
+    font-size: 2.25rem!important;
+    line-height: 1.2em!important;
+  }
+  h4 {
+    font-size: 1.65rem!important;
+    line-height: 1.3em!important;
+  }
+  h5 {
+    font-size: 1.4rem!important;
+    line-height: 1.35em!important;
+  }
+  h6 {
+    font-size: 1.2rem!important;
+    line-height: 1.4em!important;
+  }
+}
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4rem!important;
+    line-height: 1.05em!important;
+  }
+  h2 {
+    font-size: 3rem!important;
+    line-height: 1.1em!important;
+  }
+  h3 {
+    font-size: 2.5rem!important;
+    line-height: 1.15em!important;
+  }
+  h4 {
+    font-size: 1.875rem!important;
+    line-height: 1.25em!important;
+  }
+  h5 {
+    font-size: 1.45rem!important;
+    line-height: 1.3em!important;
+  }
+  h6 {
+    font-size: 1.25rem!important;
+    line-height: 1.4em!important;
+  }
+}
+
 /* Custom Utlity Classes */
 ::selection {
   color: #fff;
@@ -143,6 +196,9 @@ p {
 .bg--secondary {
   background: var(--colorSecondary);
 }
+.bg--transparent {
+  background: transparent;
+}
 .bg--center {
   background-position: center center!important;
 }
@@ -171,4 +227,18 @@ p {
 .section__heading {
   margin: 0 0 3rem 0;
   text-transform: capitalize;
+}
+/* text align */
+.text--center {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .text--md-left {
+    text-align: left!important;
+  }
+}
+@media (min-width: 1024px) {
+  .text--lg-left {
+    text-align: left!important;
+  }
 }

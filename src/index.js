@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import ScrollToTop from "./components/ScrollToTop";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter forceRefresh={true}>
   <ScrollToTop />
     <App />
   </BrowserRouter>,

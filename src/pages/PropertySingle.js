@@ -33,7 +33,7 @@ function PropertySingle(props) {
   let count = 0;
   const agentInfo = AgentsInfo.agentsData.filter((agentSingle) => agentSingle._id === property._id);
   return (
-    <div className='property-single'>
+    <div className='property-single site-content'>
       <section className='property__top-overview bg--center bg--cover bg--no-repeat' style={{ backgroundImage: `url(/images/properties/${property.coverBg})` }}>
         <div className='overview__overlay'></div>
         <div className='overview__content'>
