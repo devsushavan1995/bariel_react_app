@@ -10,6 +10,8 @@ import Agent from '../components/Agent';
 
 function Home() {
   // console.log(propertyData);
+  let noOfFeaturedProperty = 3;
+  let noOfFeaturedCounter = 0;
   return (
     <div className='site-content'>
       <HeroSlider />
@@ -51,7 +53,7 @@ function Home() {
         <div className='container'>
           <p className='section__subheading text--secondary text-center'>Properties</p>
           <h2 className='section__heading text--heading text-center'>Recently added</h2>
-          <div className='row'>
+          <div className='row justify-content-center'>
             {propertyData.propertiesInfo.map(property => (
               <Property data={property} />
             ))}
@@ -64,9 +66,9 @@ function Home() {
           <div className='row align-items-center text--center text--lg-left'>
             <div className='col-12 col-sm-12 col-md-12 col-lg-6'>
               <p className='section__subheading text--secondary'>We are Bariel</p>
-              <h3 className='text--heading'>Common Sense Solutions For All Aspects Of Commercial Property, Development Land.</h3>
-              <p className='mt-4 mb-5 mb-lg-0'>
-                <Link to='/contact-us' className='btn__secondary d-inline-block'>
+              <h3 className='text--heading mb-4 mb-lg-2'>Common Sense Solutions For All Aspects Of Commercial Property, Development Land.</h3>
+              <p className='mb-lg-0'>
+                <Link to='/contact-us' className='btn__secondary d-none d-lg-inline-block mt-4'>
                   Contact Us Now
                 </Link>
               </p>
@@ -78,6 +80,11 @@ function Home() {
                 <img src='/images/about-sign-1.png' alt='' width='200' className='d-inline-block' />
               </p>
               <p className='text--secondary text--sm'>John Doe, Founder</p>
+              <p className='mb-lg-0'>
+                <Link to='/contact-us' className='btn__secondary d-lg-none mt-3'>
+                  Contact Us Now
+                </Link>
+              </p>
             </div>
           </div>
         </div>
@@ -88,11 +95,14 @@ function Home() {
           <p className='section__subheading text--secondary text-center'>Featured</p>
           <h2 className='section__heading text--heading text-center'>Featured Properties</h2>
           <div className='row justify-content-center'>
-            {propertyData.propertiesInfo.map(property => {
-              if (property.isFeatured) {
-                return <Property data={property} />;
-              }
-            })}
+            {propertyData.propertiesInfo
+              .filter(filtProp => filtProp.isFeatured)
+              .map(property => {
+                if (noOfFeaturedCounter < 3) {
+                  noOfFeaturedCounter++;
+                  return <Property data={property} />;
+                }
+              })}
           </div>
         </div>
       </section>
@@ -105,17 +115,23 @@ function Home() {
               <h3 className='text--heading'>Take help to choose your property by our agents</h3>
             </div>
             <div className='col-12 col-md-12 col-lg-6 d-flex justify-content-center justify-content-lg-end'>
-              <Link to="/agents" class="btn__secondary d-inline-block mt-4 mt-lg-0">View All</Link>
+              <Link to='/agents' class='btn__secondary d-none d-lg-inline-block mt-4 mt-lg-0'>
+                View All
+              </Link>
             </div>
-            </div>
-              <div className='row'>
-                {AgentsInfo.agentsData.map((agent,index) => {
-                  if(index < 4) {
-                    return <Agent agent={agent} />;
-                  }
-                }
-                )}
-              </div>
+          </div>
+          <div className='row'>
+            {AgentsInfo.agentsData.map((agent, index) => {
+              if (index < 4) {
+                return <Agent agent={agent} />;
+              }
+            })}
+          </div>
+          <p className='text--center d-lg-none'>
+            <Link to='/agents' class='btn__secondary d-inline-block d-lg-none mt-4'>
+              View All
+            </Link>
+          </p>
         </div>
       </section>
       {/* Family/Commercial section */}

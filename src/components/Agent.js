@@ -5,7 +5,7 @@ function Agent(props) {
 let  agent = props.agent;
   return (
     <div className='col-12 col-sm-6 col-md-6 col-lg-3'>
-      <div className='agent position-relative overflow-hidden'>
+      <div className='agent position-relative overflow-hidden mb-4'>
         <div className='agent__profile-image-container'>
           <img src={`/images/agents/${agent.image}`} alt='' />
         </div>

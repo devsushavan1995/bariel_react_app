@@ -13,7 +13,7 @@ function Header() {
   return (
     <div>
       <header className='site-header bg-light text-center'>
-        <Navbar collapseOnSelect expand='lg' fixed='top' className='site-header__main-nav py-3'>
+        <Navbar collapseOnSelect expand='lg' fixed='top' className='site-header__main-nav py-2 py-lg-3'>
           <Container className="d-flex justify-content-between">
             <Navbar.Brand>
               <Link to='/'>

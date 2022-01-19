@@ -10,7 +10,7 @@ function HeroSlideSingle(props) {
       <div className='slide-container position-relative'>
         <div className='slide__bg bg--center bg--cover bg--no-repeat' style={{ backgroundImage: `url(/images/properties/${property.coverBg})` }}></div>
         <div className='slide__content-wrapper d-flex justify-content-start'>
-          <div className='slide-content p-5 bg--light-white'>
+          <div className='slide-content p-4 p-md-5 bg--light-white'>
             <p className='slide-content__location text--secondary'>
               <span className='slide-content__location-icon'>
                 <i className='fas fa-map-marker-alt'></i>

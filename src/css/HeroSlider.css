@@ -5,7 +5,7 @@
   width: auto;
   top: 45%;
   /* right: 0; */
-  left: 95%;
+  left: calc(100% - 40px);
 }
 .hero-slider .swiper-pagination-bullet {
     width: 32px;
@@ -30,4 +30,12 @@
 }
 .hero-slider .swiper-slide-active .slide-container .slide__bg {
   transform: scale(1);
+}
+@media (min-width: 992px) {
+  .hero-slider .swiper-horizontal > .swiper-pagination-bullets,
+.hero-slider .swiper-pagination-bullets.swiper-pagination-horizontal,
+.hero-slider .swiper-pagination-custom,
+.hero-slider .swiper-pagination-fraction {
+  left: calc(100% - 60px);
+}
 }
