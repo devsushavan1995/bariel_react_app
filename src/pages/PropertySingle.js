@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import * as propertyData from '../data/propertyData';
-import * as AgentsInfo from '../data/agentsData';
+import { propertiesInfo } from '../data/propertyData';
+import { agentsInfo } from '../data/agentsData';
 import { Swiper } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import '../css/PropertySingle.css';
@@ -22,7 +22,7 @@ function PropertySingle(props) {
   let { id } = useParams();
   id = parseInt(id);
   console.log(typeof id);
-  const property = propertyData.propertiesInfo.find(x => {
+  const property = propertiesInfo.find(x => {
     return x._id === id;
   });
   if (!property) {
@@ -31,7 +31,7 @@ function PropertySingle(props) {
   let propertyTitle = property.title;
   let setCountMaxRecentlyAddedItems = 3;
   let count = 0;
-  const agentInfo = AgentsInfo.agentsData.filter((agentSingle) => agentSingle._id === property._id);
+  const agentInfo = agentsInfo.filter((agentSingle) => agentSingle._id === property._id);
   return (
     <div className='property-single site-content'>
       <section className='property__top-overview bg--center bg--cover bg--no-repeat' style={{ backgroundImage: `url(/images/properties/${property.coverBg})` }}>
@@ -233,7 +233,7 @@ function PropertySingle(props) {
           <p className='section__subheading text--secondary text-left'>More Properties</p>
           <h2 className='section__heading text--heading'>Recently Added</h2>
           <div className='row'>
-            {propertyData.propertiesInfo.filter((propa) => propa.title !== propertyTitle).map((property,index) => {
+            { propertiesInfo.filter((propa) => propa.title !== propertyTitle).map((property,index) => {
               if(count < setCountMaxRecentlyAddedItems){
                 count++;
                 return <Property data={property} />; 

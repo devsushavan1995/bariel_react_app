@@ -1,7 +1,7 @@
 import React from 'react'
 import Pagetitle from '../components/Pagetitle'
 import Agent from '../components/Agent';
-import * as AgentsInfo from '../data/agentsData';
+import { agentsInfo } from '../data/agentsData';
 
 function Agents() {
     return (
@@ -10,7 +10,7 @@ function Agents() {
             <section className="section--padding agents-section">
                 <div className="container">
                     <div className="row">
-                    {AgentsInfo.agentsData.map(agent => <Agent agent={agent}/>)}
+                    {agentsInfo.map(agent => <Agent agent={agent}/>)}
                     </div>
                 </div>
             </section>

@@ -23,6 +23,8 @@
 .hero-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background: var(--colorSecondary);
     color: #fff;
+    border-radius: 0;
+    width: 32px;
 }
 .hero-slider .slide-container .slide__bg {
   transform: scale(1.05);

@@ -11,14 +11,14 @@ function Footer() {
           <Container>
             <div className='site-footer__content row'>
               <div className='col-12 col-md-12 col-lg-6'>
-                <div className='footer__about'>
+                <div className='footer__about text--center text--md-left mb-5 mb-lg-0'>
                   <p>
                     <Link to='/'>
                       <img src='/images/logo-2.png' alt='light logo' />
                     </Link>
                   </p>
                   <p className='text--light'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi quae hic enim quod iste esse, iusto inventore, ipsum molestias rem vero doloremque. Explicabo fugiat magni error, molestias eveniet quaerat. Esse.</p>
-                  <ul className='social-icons-list d-flex'>
+                  <ul className='social-icons-list d-flex justify-content-center justify-content-md-start'>
                     <li className='social-icon'>
                       <a href='#' target='_blank'>
                         <i className='fab fa-facebook-f'></i>
@@ -42,7 +42,7 @@ function Footer() {
                   </ul>
                 </div>
               </div>
-              <div className='col-12 col-md-6 col-lg-3'>
+              <div className='col-12 col-md-6 col-lg-3 text--center text--md-left mb-5 mb-md-0'>
                 <h5 className='text--light'>Important Links</h5>
                 <ul className='footer__menu'>
                   <li className='footer__menu-item'>
@@ -59,7 +59,7 @@ function Footer() {
                   </li>
                 </ul>
               </div>
-              <div className='col-12 col-md-6 col-lg-3'>
+              <div className='col-12 col-md-6 col-lg-3 text--center text--md-left'>
                 <h5 className='text--light'>Contact Us</h5>
                 <div className='footer__contact'>
                   <p className='text--light'>

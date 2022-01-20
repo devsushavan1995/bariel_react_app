@@ -3,7 +3,7 @@ import Pagetitle from '../components/Pagetitle';
 import '../css/Pagetitle.css';
 import '../css/Pages.css';
 import Property from '../components/Property';
-import * as propertyData from '../data/propertyData';
+import { propertiesInfo } from '../data/propertyData';
 
 function Properties() {
   return (
@@ -12,7 +12,7 @@ function Properties() {
       <section className='section--padding'>
         <div className='container'>
           <div className='row'>
-            {propertyData.propertiesInfo.map(property => (
+            {propertiesInfo.map(property => (
               <Property key={property._id} data={property}></Property>
             ))}
           </div>

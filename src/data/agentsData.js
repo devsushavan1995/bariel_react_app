@@ -1,4 +1,4 @@
-export const agentsData = [
+export const agentsInfo =  [
     {
         _id: 1,
         title: "John Doe",

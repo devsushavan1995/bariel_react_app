@@ -19,7 +19,7 @@
 }
 .site-header .site-header__main-nav .main-nav-menu .main-nav-menu__item a {
   color: var(--colorNavLink);
-  padding: 0 0.75rem;
+  padding: 0.25rem 0.75rem;
 }
 .site-header .site-header__main-nav .main-nav-menu .main-nav-menu__item a:hover,
 .site-header .site-header__main-nav .main-nav-menu .main-nav-menu__item a.active {
@@ -30,7 +30,7 @@
 }
 .site-header .navbar-collapse {
   position: absolute;
-  top: 100px;
+  top: 84px;
   width: 100%;
   left: 0px;
   right: 0px;

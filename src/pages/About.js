@@ -1,9 +1,11 @@
 import React from 'react';
 import Pagetitle from '../components/Pagetitle';
 import { Link } from 'react-router-dom';
-import * as AgentsInfo from '../data/agentsData';
+import { agentsInfo } from '../data/agentsData';
 import Agent from '../components/Agent';
 import Testimonials from '../components/Testimonials';
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 
 function About() {
   return (
@@ -68,26 +70,50 @@ function About() {
           <div className='row'>
             <div className='col-6 col-sm-6 col-md-6 col-lg-3'>
               <div className='stat'>
-                <h2 className='stat__count text--light'>385</h2>
+                <CountUp end={385} redraw={true}>
+                  {({ countUpRef, start }) => (
+                    <VisibilitySensor onChange={start} delayedCall>
+                      <h1 className="text--light font--para font--weight-500" ref={countUpRef} />
+                    </VisibilitySensor>
+                  )}
+                </CountUp>
                 <p className='stat__title text--light text-uppercase'>properties to rent</p>
               </div>
             </div>
             <div className='col-6 col-sm-6 col-md-6 col-lg-3'>
               <div className='stat'>
-                <h1 className='stat__count text--light'>385</h1>
-                <p className='stat__title text--light text-uppercase'>properties to rent</p>
+              <CountUp end={520} redraw={true}>
+                  {({ countUpRef, start }) => (
+                    <VisibilitySensor onChange={start} delayedCall>
+                      <h1 className="text--light font--para font--weight-500" ref={countUpRef} />
+                    </VisibilitySensor>
+                  )}
+                </CountUp>
+                <p className='stat__title text--light text-uppercase'>properties for sale</p>
               </div>
             </div>
             <div className='col-6 col-sm-6 col-md-6 col-lg-3'>
               <div className='stat'>
-                <h1 className='stat__count text--light'>385</h1>
-                <p className='stat__title text--light text-uppercase'>properties to rent</p>
+              <CountUp end={612} redraw={true}>
+                  {({ countUpRef, start }) => (
+                    <VisibilitySensor onChange={start} delayedCall>
+                      <h1 className="text--light font--para font--weight-500" ref={countUpRef} />
+                    </VisibilitySensor>
+                  )}
+                </CountUp>
+                <p className='stat__title text--light text-uppercase'>properties under offer</p>
               </div>
             </div>
             <div className='col-6 col-sm-6 col-md-6 col-lg-3'>
               <div className='stat'>
-                <h1 className='stat__count text--light'>385</h1>
-                <p className='stat__title text--light text-uppercase'>properties to rent</p>
+              <CountUp end={30000} redraw={true}>
+                  {({ countUpRef, start }) => (
+                    <VisibilitySensor onChange={start} delayedCall>
+                      <h1 className="text--light font--para font--weight-500" ref={countUpRef} />
+                    </VisibilitySensor>
+                  )}
+                </CountUp>
+                <p className='stat__title text--light text-uppercase'>square ft</p>
               </div>
             </div>
           </div>
@@ -107,7 +133,7 @@ function About() {
             </div>
           </div>
           <div className='row'>
-            {AgentsInfo.agentsData.map((agent, index) => {
+            {agentsInfo.map((agent, index) => {
               if (index < 4) {
                 return <Agent agent={agent} />;
               }
