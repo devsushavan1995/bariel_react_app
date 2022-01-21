@@ -132,7 +132,7 @@ function Home() {
         </div>
       </section>
       {/* Agents section */}
-      <section className='section--padding-bottom-only'>
+      <section className='section--padding overflow-hidden'>
         <div className='container'>
           <div className='row mb-5 align-items-center text--center text--lg-left'>
             <div className='col-12 col-md-12 col-lg-6'>
@@ -145,7 +145,7 @@ function Home() {
               </Link>
             </div>
           </div>
-          <div className='row'>
+          <div className='row flex-nowrap scroll--horizontal'>
             {agentsInfo.map((agent, index) => {
               if (index < 4) {
                 return <Agent agent={agent} />;

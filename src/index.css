@@ -247,7 +247,7 @@ p {
     text-align: left!important;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .text--lg-left {
     text-align: left!important;
   }
@@ -263,4 +263,10 @@ p {
 .swiper-pagination-clickable .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 24px;
   border-radius: 30px;
+}
+/* scroll--horizontal */
+.scroll--horizontal {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
 }

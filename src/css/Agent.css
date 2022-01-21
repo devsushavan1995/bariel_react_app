@@ -12,7 +12,7 @@
 }
 .agent .agent__content {
     position: absolute;
-    bottom: -65px;
+    bottom: -90px;
     right: 0;
     width: 90%;
     background: #fff;
@@ -33,4 +33,19 @@
 }
 .agent .agent__content .agent__contact .agent__contact-text:hover {
     text-decoration: underline!important;
+}
+@media (min-width: 576px) {
+    .agent .agent__content {
+        bottom: -68px;
+    }
+}
+@media (min-width: 992px) {
+    .agent .agent__content {
+        bottom: -90px;
+    }
+}
+@media (min-width: 1200px) {
+    .agent .agent__content {
+        bottom: -68px;
+    }
 }

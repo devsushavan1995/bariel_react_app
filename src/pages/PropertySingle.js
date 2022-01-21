@@ -74,7 +74,7 @@ function PropertySingle(props) {
       <section className='section--padding'>
         <div className='container'>
           <div className='row property-single__desc'>
-            <div className='col-12 col-md-12 col-lg-8'>
+            <div className='col-12 col-md-12 col-lg-8 mb-5 mb-md-0'>
               <Swiper
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -100,12 +100,12 @@ function PropertySingle(props) {
                 </Tab>
                 <Tab eventKey='amenities&features' title='Amenities & Features'>
                   <div className='amenities-features-wrapper'>
-                    <h5 className='text--heading my-5'>Core Details</h5>
+                    <h5 className='text--heading mt-5 mb-4'>Core Details</h5>
                     <div className='row'>
                       <div className='col-12 col-md-6 col-lg-6 mb-2'>
                         <div className='row'>
                           <div className='col-6'>
-                            <p className='text--sm font-weight-medium'>Property Size</p>
+                            <p className='text--sm font-weight-medium text--heading'>Property Size</p>
                           </div>
                           <div className='col-6'>
                             <p className='text--sm text--secondary'>{`${property.propertyArea} sqft`}</p>
@@ -115,7 +115,7 @@ function PropertySingle(props) {
                       <div className='col-12 col-md-6 col-lg-6 mb-2'>
                         <div className='row'>
                           <div className='col-6'>
-                            <p className='text--sm font-weight-medium'>Total Rooms</p>
+                            <p className='text--sm font-weight-medium text--heading'>Total Rooms</p>
                           </div>
                           <div className='col-6'>
                             <p className='text--sm text--secondary'>{property.noOfRooms}</p>
@@ -125,7 +125,7 @@ function PropertySingle(props) {
                       <div className='col-12 col-md-6 col-lg-6 mb-2'>
                         <div className='row'>
                           <div className='col-6'>
-                            <p className='text--sm font-weight-medium'>Bedrooms</p>
+                            <p className='text--sm font-weight-medium text--heading'>Bedrooms</p>
                           </div>
                           <div className='col-6'>
                             <p className='text--sm text--secondary'>{property.noOfRooms}</p>
@@ -135,7 +135,7 @@ function PropertySingle(props) {
                       <div className='col-12 col-md-6 col-lg-6 mb-2'>
                         <div className='row'>
                           <div className='col-6'>
-                            <p className='text--sm font-weight-medium'>Bathrooms</p>
+                            <p className='text--sm font-weight-medium text--heading'>Bathrooms</p>
                           </div>
                           <div className='col-6'>
                             <p className='text--sm text--secondary'>{property.noOfBathrooms}</p>
@@ -145,7 +145,7 @@ function PropertySingle(props) {
                       <div className='col-12 col-md-6 col-lg-6 mb-2'>
                         <div className='row'>
                           <div className='col-6'>
-                            <p className='text--sm font-weight-medium'>Garage</p>
+                            <p className='text--sm font-weight-medium text--heading'>Garage</p>
                           </div>
                           <div className='col-6'>
                             <p className='text--sm text--secondary'>{property.noOfGarages}</p>
@@ -155,7 +155,7 @@ function PropertySingle(props) {
                       <div className='col-12 col-md-6 col-lg-6 mb-2'>
                         <div className='row'>
                           <div className='col-6'>
-                            <p className='text--sm font-weight-medium'>Year of Build</p>
+                            <p className='text--sm font-weight-medium text--heading'>Year of Build</p>
                           </div>
                           <div className='col-6'>
                             <p className='text--sm text--secondary'>2021</p>
@@ -163,7 +163,7 @@ function PropertySingle(props) {
                         </div>
                       </div>
                     </div>
-                    <h5 className='text--heading my-5'>More Features</h5>
+                    <h5 className='text--heading mt-5 mb-4'>More Features</h5>
                     <ul className='property-single__more-features'>
                       <div className='row'>
                         {property.moreFeatures.map((feature) => (
@@ -171,7 +171,7 @@ function PropertySingle(props) {
                         ))}
                       </div>
                     </ul>
-                    <h5 className='text--heading my-5'>Floor Plan</h5>
+                    <h5 className='text--heading mt-5 mb-4'>Floor Plan</h5>
                     <p>
                       <img src='/images/dummy-800x400.png' alt='' />
                     </p>
@@ -230,8 +230,8 @@ function PropertySingle(props) {
       </section>
       <section className='section--padding bg--light'>
         <div className='container'>
-          <p className='section__subheading text--secondary text-left'>More Properties</p>
-          <h2 className='section__heading text--heading'>Recently Added</h2>
+          <p className='section__subheading text--secondary text--center text--lg-left'>More Properties</p>
+          <h2 className='section__heading text--heading text--center text--lg-left'>Recently Added</h2>
           <div className='row'>
             { propertiesInfo.filter((propa) => propa.title !== propertyTitle).map((property,index) => {
               if(count < setCountMaxRecentlyAddedItems){
