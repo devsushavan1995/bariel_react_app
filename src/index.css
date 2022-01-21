@@ -270,3 +270,23 @@ p {
   overflow-y: hidden;
   white-space: nowrap;
 }
+
+/* Breadcumb style */
+.breadcrumb {
+  align-items: center;
+}
+.breadcrumb .breadcrumb-item a {
+  color: #fff;
+}
+.breadcrumb-item+.breadcrumb-item {
+  font-size: 0.9rem;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+  margin-top: 5px;
+}
+.breadcrumb .disabled {
+  pointer-events: none!important;
+  padding: 0.25rem 0.5rem;
+  color: #fff;
+  background: var(--colorSecondary);
+}

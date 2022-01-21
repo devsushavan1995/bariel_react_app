@@ -145,7 +145,7 @@ function Home() {
               </Link>
             </div>
           </div>
-          <div className='row flex-nowrap scroll--horizontal'>
+          <div className='row'>
             {agentsInfo.map((agent, index) => {
               if (index < 4) {
                 return <Agent agent={agent} />;

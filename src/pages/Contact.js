@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Pagetitle from '../components/Pagetitle';
 import ContactForm from '../components/ContactForm'
 import '../css/Pages.css';
 function Contact() {
+  const [crumbs, setCrumbs] = useState(['home', 'contact us']);
   return (
     <div className='site-content site-content--contact-us'>
-      <Pagetitle title='contact us' />
+      <Pagetitle title='contact us' crumbs={crumbs} />
       <section className='contact-us-section section--padding'>
         <div className='container'>
           <p className='section__subheading text--secondary'>DROP US A LINE</p>

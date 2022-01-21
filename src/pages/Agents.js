@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Pagetitle from '../components/Pagetitle'
 import Agent from '../components/Agent';
 import { agentsInfo } from '../data/agentsData';
 
 function Agents() {
+    const [crumbs, setCrumbs] = useState(['home', 'agents']);
     return (
         <div className='site-content'>
-            <Pagetitle title="agents"/>
+            <Pagetitle title="agents" crumbs={crumbs}/>
             <section className="section--padding agents-section">
                 <div className="container">
                     <div className="row">

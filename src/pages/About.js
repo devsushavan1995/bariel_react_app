@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Pagetitle from '../components/Pagetitle';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { agentsInfo } from '../data/agentsData';
 import Agent from '../components/Agent';
 import Testimonials from '../components/Testimonials';
@@ -8,9 +8,15 @@ import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 
 function About() {
+  const navigate = useNavigate();
+  const [crumbs, setCrumbs] = useState(['home', 'about Us']);
+  // const selected = crumb => {
+  //   crumb = "/" + crumb;
+  //   navigate(crumb);
+  // }
   return (
     <div className='site-content'>
-      <Pagetitle title='about us' />
+      <Pagetitle title='about us' crumbs={crumbs} />
       <section className='section--padding about-detailed-section'>
         <div className='container'>
           <div className='row align-items-center'>
