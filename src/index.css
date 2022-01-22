@@ -275,14 +275,15 @@ p {
 .breadcrumb {
   align-items: center;
 }
+.breadcrumb .breadcrumb-item {
+  display: flex;
+}
 .breadcrumb .breadcrumb-item a {
   color: #fff;
-}
-.breadcrumb-item+.breadcrumb-item {
   font-size: 0.9rem;
 }
 .breadcrumb-item+.breadcrumb-item::before {
-  margin-top: 5px;
+  margin-top: 1px;
 }
 .breadcrumb .disabled {
   pointer-events: none!important;

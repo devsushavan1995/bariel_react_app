@@ -14,6 +14,13 @@ function Breadcrumb(props) {
         {
           props.crumbs.map((crumb, ci) => {
             const disabled = isLast(ci) ? 'disabled' : '';
+            let crumbPath = "";
+            if(crumb === "home") {
+              crumbPath = "";
+            }
+            else {
+              crumbPath = crumb.replace(/\s+/g, '-');
+            }
             return (
               <li
                 key={ ci }
@@ -22,7 +29,7 @@ function Breadcrumb(props) {
                 {/* <button className={ `btn btn-link ${ disabled }` } onClick={ () => props.selected(crumb) }>
                   { crumb }
                 </button> */}
-                <NavLink to={`/${crumb ==="home" ? '': crumb}`} activeClassName="active" className={ `text-capitalize ${ disabled }` }>
+                <NavLink to={`/${crumbPath}`} activeClassName="active" className={ `text-capitalize ${ disabled }` }>
                   { crumb }
                 </NavLink>
               </li>
