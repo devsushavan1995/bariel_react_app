@@ -3,60 +3,13 @@ import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
 import '../css/Header.css';
 import { Offcanvas } from 'react-bootstrap';
-import Select from 'react-select';
-import SearchAdvanced from './SearchAdvanced';
+import SearchForm from './SearchForm';
 
 function Header() {
   const [show, setShow] = useState(false);
-  const [toggle, setToggle] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  const locationOptions = [
-    { value: 'New Town, Kolkata', label: 'New Town, Kolkata' },
-    { value: 'Salt Lake, Kolkata', label: 'Salt Lake, Kolkata' },
-    { value: 'Jadavpur, South 24 Paragana', label: 'Jadavpur, South 24 Paragana' },
-    { value: 'Dumdum, North 24 Paragana', label: 'Dumdum, North 24 Paragana' },
-    { value: 'Siliguri, Jalpaiguri', label: 'Siliguri, Jalpaiguri' },
-    { value: 'Bishnupur, Bankura', label: 'Bishnupur, Bankura' },
-  ];
-  const propertyStatusOptions = [
-    {
-      value: 'any',
-      label: 'Any',
-    },
-    {
-      value: 'for rent',
-      label: 'For Rent',
-    },
-    {
-      value: 'for buy',
-      label: 'For Buy',
-    },
-  ];
-  const propertyTypeOptions = [
-    {
-      value: 'any',
-      label: 'Any',
-    },
-    {
-      value: 'shop',
-      label: 'Shop',
-    },
-    {
-      value: 'office',
-      label: 'Office',
-    },
-    {
-      value: 'apartment',
-      label: 'Apartment',
-    },
-    {
-      value: 'villa',
-      label: 'Villa',
-    },
-  ];
   return (
     <div>
       <header className='site-header bg-light text-center'>
@@ -97,9 +50,9 @@ function Header() {
                         About Us
                       </NavLink>
                     </li>
-                    {/* <li className='main-nav-menu__item'>
+                    <li className='main-nav-menu__item'>
                     <Link to='/blog'>Blog</Link>
-                  </li> */}
+                  </li>
                     <li className='main-nav-menu__item'>
                       <NavLink activeClassName='active' to='/contact-us'>
                         Contact Us
@@ -123,41 +76,8 @@ function Header() {
           <Offcanvas.Title className='text--heading'>Find Property</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {/* Search Form starts */}
-          <form action='' className='search-form'>
-            <div className='row'>
-              <div className='col-12 mb-3'>
-                <label htmlFor='location' className='text--heading text--sm mb-2'>
-                  Location
-                </label>
-                <Select options={locationOptions} />
-              </div>
-              <div className='col-6 mb-3'>
-                <label htmlFor='location' className='text--heading text--sm mb-2'>
-                  Property Status
-                </label>
-                <Select options={propertyStatusOptions} />
-              </div>
-              <div className='col-6 mb-3'>
-                <label htmlFor='location' className='text--heading text--sm mb-2'>
-                  Property Type
-                </label>
-                <Select options={propertyTypeOptions} />
-              </div>
-            </div>
-            {toggle ? <SearchAdvanced isShownClass={'d-flex'} /> : <SearchAdvanced isShownClass={'d-none'} />}
-            <div className='d-flex justify-content-between align-items-center'>
-              <div>
-                <input type='checkbox' name='advance-filter' className='search-form__checkbox--advanced-filter-trigger' onClick={() => setToggle(!toggle)} />
-                <label htmlFor='advance-filter' className='text--heading text--sm'>
-                  Advanced Filter
-                </label>
-              </div>
-              <button type='submit' class='btn__secondary'>
-                Search
-              </button>
-            </div>
-          </form>
+          {/* Search Form */}
+          <SearchForm/>
         </Offcanvas.Body>
       </Offcanvas>
     </div>

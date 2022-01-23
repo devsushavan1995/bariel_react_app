@@ -1,0 +1,31 @@
+.post {
+    border: 1px solid var(--colorBorder);
+}
+.post .post__image-container {
+    display: block;
+    overflow: hidden;
+}
+.post .post__image-container img {
+    transition: all 0.3s ease;
+}
+.post:hover .post__image-container img {
+    transform: scale(1.05);
+}
+.post .post__title a {
+    color: var(--colorHeading);
+}
+.post .post__title a:hover {
+    color: var(--colorSecondary);
+}
+.post .post__categories a {
+    display: inline-block;
+    width: auto;
+    font-size: 0.75rem;
+    background: var(--colorSecondary);
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+}
+.post .post__publish-date span:nth-child(1) {
+    margin-right: 0.5rem;
+}

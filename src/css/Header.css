@@ -52,6 +52,9 @@
 .search-form__checkbox--advanced-filter-trigger {
   margin-right: 0.25rem;
 }
+.search-form__checkbox--advanced-filter-trigger + label {
+  line-height: 1em;
+}
 @media (min-width: 576px) {
     .site-header .navbar-collapse .navbar-nav {
         max-width: 520px;

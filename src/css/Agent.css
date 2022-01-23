@@ -14,16 +14,24 @@
     position: absolute;
     bottom: -90px;
     right: 0;
-    width: 90%;
+    width: 95%;
     background: #fff;
-    padding: 1rem;
+    padding: 0.75rem;
     transition: all 0.3s ease;
 }
 .agent .agent__content .agent__contact {
     margin: 0.75rem 0 0 0;
+    display: flex;
+    flex-direction: column;
 }
 .agent:hover .agent__content {
-    bottom:6px;
+    bottom:3px;
+}
+.agent .agent__content .agent__title {
+    font-size: 0.85rem!important;
+}
+.agent .agent__content p {
+    font-size: 0.75rem;
 }
 .agent .agent__content .agent__contact .agent__contact-icon {
     margin-right: 0.45rem;
@@ -38,10 +46,31 @@
     .agent .agent__content {
         bottom: -68px;
     }
+    .agent .agent__content .agent__contact {
+        flex-direction: row;
+    }
+    .agent .agent__content .agent__title {
+        font-size: 1.15rem!important;
+    }
+    .agent .agent__content p {
+        font-size: 0.9rem;
+    }
+    .agent:hover .agent__content {
+        bottom:6px;
+    }
+}
+@media (min-width: 768px) {
+    .agent .agent__content {
+        padding: 1rem;
+        width: 90%;
+    }
+    .agent:hover .agent__content {
+        bottom: 6px;
+    }
 }
 @media (min-width: 992px) {
     .agent .agent__content {
-        bottom: -90px;
+        bottom: -64px;
     }
 }
 @media (min-width: 1200px) {

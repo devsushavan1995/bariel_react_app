@@ -40,6 +40,9 @@ button {
   color: var(--colorPrimary);
   padding: 0.75rem 1.75rem;
 }
+label {
+  margin-right: 0.5rem;
+}
 .site-content {
   margin-top: 4.75rem;
 }
