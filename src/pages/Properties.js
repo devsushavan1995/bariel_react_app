@@ -57,12 +57,12 @@ function Properties() {
       <section className='section--padding'>
         <div className='container'>
           <div className='properties-filter-wrapper d-flex justify-content-between mb-5'>
-            <button className='btn__primary py-2 px-3 text--sm' onClick={handleShow}>
+            <button className='btn__primary py-2 px-2 px-md-3 text--sm' onClick={handleShow}>
               <i class='fa fa-filter'></i>
               <span>&nbsp;</span>
               Advance Filter
             </button>
-            <div className='d-flex align-items-center'>
+            <div className='d-flex align-items-center properties--filter-by-status'>
               <label htmlFor='propertyStatus' className='text--heading text--sm'>
                 Property Status
               </label>

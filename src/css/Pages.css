@@ -65,7 +65,28 @@
 #react-select-2-listbox {
   z-index: 1029!important;
 }
-
+.properties-filter-wrapper .properties--filter-by-status label {
+  margin-right: 0.5rem;
+}
+.properties-filter-wrapper button,
+.properties-filter-wrapper label,
+.properties-filter-wrapper .css-b62m3t-container {
+  font-size: 0.85rem;
+}
+@media (min-width: 768px) {
+  .properties-filter-wrapper button,
+.properties-filter-wrapper label,
+.properties-filter-wrapper .css-b62m3t-container {
+  font-size: 0.9rem;
+}
+}
+@media (min-width: 768px) {
+  .properties-filter-wrapper button,
+.properties-filter-wrapper label,
+.properties-filter-wrapper .css-b62m3t-container {
+  font-size: 0.9375rem;
+}
+}
 /* Contact Page */
 .site-content--contact-us .section__heading,
 .site-content--contact-us .section__subheading {
@@ -118,6 +139,7 @@
 }
 .blog-section .blog-sidebar .recent-post .recent-post__image {
   margin-right: 0.5rem;
+  min-width: 64px;
 }
 .blog-section .blog-sidebar .recent-post .recent-post__title {
   color: var(--colorHeading);

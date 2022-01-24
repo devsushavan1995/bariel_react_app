@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import PropertySingle from './pages/PropertySingle';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import BlogSingle from './pages/BlogSingle';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='agents' element={<Agents />} />
           <Route path='about-us' element={<About />} />
           <Route path='blog' element={<Blog />} />
+          <Route path='/blog/:id' element={<BlogSingle />} />
           <Route path='contact-us' element={<Contact />} />
         </Routes>
         <Footer/>

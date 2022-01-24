@@ -51,8 +51,10 @@ function Header() {
                       </NavLink>
                     </li>
                     <li className='main-nav-menu__item'>
-                    <Link to='/blog'>Blog</Link>
-                  </li>
+                      <NavLink activeClassName='active' to='/blog'>
+                        Blog
+                      </NavLink>
+                    </li>
                     <li className='main-nav-menu__item'>
                       <NavLink activeClassName='active' to='/contact-us'>
                         Contact Us
