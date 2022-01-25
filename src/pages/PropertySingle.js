@@ -21,7 +21,6 @@ function PropertySingle(props) {
   const [key, setKey] = useState('description');
   let { id } = useParams();
   id = parseInt(id);
-  console.log(typeof id);
   const property = propertiesInfo.find(x => {
     return x._id === id;
   });

@@ -67,7 +67,7 @@ function Blog() {
                       recentPostCounter++;
                       return (
                         <li className='recent-post mb-3'>
-                          <Link to='/' className='d-flex align-items-center'>
+                          <Link to={`/blog/${post._id}`} className='d-flex align-items-center'>
                             <span className='recent-post__image'>
                               <img src={`/images/blog/${post.image}`} alt='' width='64' />
                             </span>
@@ -85,7 +85,7 @@ function Blog() {
                          if(popularCategoriesCounter < 7) {
                             popularCategoriesCounter++;
                             return (
-                                <Link to={`/blog/${cat.replace(/\s+/g, '-')}`} className='text-capitalize'>{cat}</Link> 
+                                <Link to={`/blog/category=${cat.replace(/\s+/g, '-')}`} className='text-capitalize'>{cat}</Link> 
                             );
                          }
                      })}
