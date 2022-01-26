@@ -1,0 +1,21 @@
+/* Breadcumb style */
+.breadcrumb {
+  align-items: center;
+  z-index: 11;
+}
+.breadcrumb .breadcrumb-item {
+  display: flex;
+}
+.breadcrumb .breadcrumb-item a {
+  color: #fff;
+  font-size: 0.9rem;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  margin-top: 1px;
+}
+.breadcrumb .disabled {
+  pointer-events: none !important;
+  padding: 0.25rem 0.5rem;
+  color: #fff;
+  background: var(--colorSecondary);
+}

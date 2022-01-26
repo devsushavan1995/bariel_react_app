@@ -7,7 +7,7 @@ function Agents() {
     const [crumbs, setCrumbs] = useState(['home', 'agents']);
     return (
         <div className='site-content'>
-            <Pagetitle title="agents" crumbs={crumbs}/>
+            <Pagetitle title="agents" crumbs={crumbs} bgImage="hi, there"/>
             <section className="section--padding agents-section">
                 <div className="container">
                     <div className="row">

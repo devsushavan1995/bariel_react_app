@@ -2,7 +2,7 @@ export const propertiesInfo = [
   {
     _id: 1,
     image: '/images/properties/prop1.jpg',
-    title: 'Tokio plazza Bosti Bari 1st Floor',
+    title: 'Tokio Plazza Apartment 1st Floor',
     isRent: true,
     monthlyRent: 400,
     buyingPrice: 'n/a',

@@ -133,13 +133,13 @@ function SearchForm() {
           <label htmlFor='location' className='text--heading text--sm mb-2'>
             Property Status
           </label>
-          <Select options={propertyStatusOptions} />
+          <Select options={propertyStatusOptions} defaultValue={{ label: 'Any', value: 'any' }}/>
         </div>
         <div className='col-6 mb-3'>
           <label htmlFor='location' className='text--heading text--sm mb-2'>
             Property Type
           </label>
-          <Select options={propertyTypeOptions} />
+          <Select options={propertyTypeOptions} defaultValue={{ label: 'Any', value: 'any' }} />
         </div>
       </div>
       <div className={`row search-form__advanced-options-container ${isShownClass}`}>
@@ -147,19 +147,19 @@ function SearchForm() {
         <label htmlFor='location' className='text--heading text--sm mb-2'>
           Min Beds
         </label>
-        <Select options={bedOptions} />
+        <Select options={bedOptions} defaultValue={{ label: 'Any', value: 'any' }}/>
       </div>
       <div className='col-4 mb-3'>
         <label htmlFor='location' className='text--heading text--sm mb-2'>
           Min Baths
         </label>
-        <Select options={bathOptions} />
+        <Select options={bathOptions} defaultValue={{ label: 'Any', value: 'any' }} />
       </div>
       <div className='col-4 mb-3'>
         <label htmlFor='location' className='text--heading text--sm mb-2'>
           Min Garages
         </label>
-        <Select options={garagesOptions} />
+        <Select options={garagesOptions} defaultValue={{ label: 'Any', value: 'any' }} />
       </div>
     </div>
       <div className='d-flex justify-content-between align-items-center'>
