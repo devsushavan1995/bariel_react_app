@@ -18,7 +18,7 @@ function BlogSingle() {
   //   console.log(post.title);
   return (
     <div className='site-content site-content--blog-single'>
-      <Pagetitle title='Blog Single' crumbs={crumbs} />
+      <Pagetitle title={post.title} crumbs={crumbs} />
       <section className='section--padding'>
         <div className='container'>
           <div className='row justify-content-center'>

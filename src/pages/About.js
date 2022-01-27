@@ -16,7 +16,7 @@ function About() {
   // }
   return (
     <div className='site-content'>
-      <Pagetitle title='about us' crumbs={crumbs} />
+      <Pagetitle title='about us' crumbs={crumbs} bgImage="about-us-pagetitle-bg.jpg" />
       <section className='section--padding about-detailed-section'>
         <div className='container'>
           <div className='row align-items-center'>

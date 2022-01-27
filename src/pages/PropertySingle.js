@@ -30,7 +30,7 @@ function PropertySingle(props) {
   let propertyTitle = property.title;
   let setCountMaxRecentlyAddedItems = 3;
   let count = 0;
-  const agentInfo = agentsInfo.filter((agentSingle) => agentSingle._id === property._id);
+  const agentInfo = agentsInfo.filter((agentSingle) => agentSingle._id === property.agentId);
   return (
     <div className='property-single site-content'>
       <section className='property__top-overview bg--center bg--cover bg--no-repeat' style={{ backgroundImage: `url(/images/properties/${property.coverBg})` }}>

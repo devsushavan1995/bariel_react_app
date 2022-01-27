@@ -12,8 +12,8 @@
   color: #fff;
   z-index: 10;
 }
-.page-title-section .page-title__overlay {
-  background: rgba(0,0,0,0.5);
+.page-title-section .page-title__bg-image,
+.page-title-section .page-title__bg-overlay {
   position: absolute;
   top:0;
   left:0;
@@ -21,4 +21,7 @@
   height: 100%;
   z-index: 0;
   pointer-events: none;
+}
+.page-title-section .page-title__bg-overlay {
+  background: rgba(0,0,0,0.5);
 }

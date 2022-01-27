@@ -49,9 +49,6 @@
 .features-section .feature .feature__desc {
   z-index: 2;
 }
-.site-content.site-content--properties .page-title-section {
-  background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.5)),  url('/public/images/property-page-bg.jpg')!important;
-}
 @media (min-width: 992px) {
   .about-detailed-section .about-detailed__content {
     padding: 0 0 0 2.5rem;

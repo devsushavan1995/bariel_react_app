@@ -41,7 +41,7 @@ function Blog() {
  }
   return (
     <div className='site-content'>
-      <Pagetitle title='blog' crumbs={crumbs} />
+      <Pagetitle title='blog' crumbs={crumbs} bgImage="blog-pagetitle-bg.jpg"/>
       <section className='blog-section section--padding'>
         <div className='container'>
           <div className='row'>

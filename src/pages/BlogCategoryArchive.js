@@ -10,7 +10,7 @@ function BlogCategoryArchive() {
   const [showPosts, setShowPosts] = useState(posts);
   return (
     <div className='site-content'>
-      <Pagetitle title={category} crumbs={crumbs} />
+      <Pagetitle title={`Blog Category=${category.replace(/-+/g, ' ')}`} crumbs={crumbs} />
       <section className='section--padding'>
           <div className="container">
               <div className="row">

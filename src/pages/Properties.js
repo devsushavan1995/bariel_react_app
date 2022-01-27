@@ -53,7 +53,7 @@ function Properties() {
   }
   return (
     <div className='site-content site-content--properties'>
-      <Pagetitle title='properties' crumbs={crumbs} style="{backgroundImage: url('/images/properties-page-bg.jpg')}" />
+      <Pagetitle title='properties' crumbs={crumbs} bgImage="property-page-bg.jpg"/>
       <section className='section--padding'>
         <div className='container'>
           <div className='properties-filter-wrapper d-flex justify-content-between mb-5'>

@@ -6,7 +6,7 @@ function Contact() {
   const [crumbs, setCrumbs] = useState(['home', 'contact us']);
   return (
     <div className='site-content site-content--contact-us'>
-      <Pagetitle title='contact us' crumbs={crumbs} />
+      <Pagetitle title='contact us' crumbs={crumbs} bgImage="contact-pagetitle-bg.jpg"/>
       <section className='contact-us-section section--padding'>
         <div className='container'>
           <p className='section__subheading text--secondary'>DROP US A LINE</p>
