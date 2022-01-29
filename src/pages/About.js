@@ -15,7 +15,7 @@ function About() {
   //   navigate(crumb);
   // }
   return (
-    <div className='site-content'>
+    <div>
       <Pagetitle title='about us' crumbs={crumbs} bgImage="about-us-pagetitle-bg.jpg" />
       <section className='section--padding about-detailed-section'>
         <div className='container'>

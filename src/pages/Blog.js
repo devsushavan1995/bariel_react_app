@@ -6,48 +6,48 @@ import { posts } from '../data/blogPosts.js';
 function Blog() {
   const [crumbs, setCrumbs] = useState(['home', 'blog']);
   const [showPosts, setShowPosts] = useState(posts);
-  const [searchVal, setSearchVal] = useState("");
+  const [searchVal, setSearchVal] = useState('');
   const [errorStatus, setErrorStaus] = useState(false);
+
   let recentPostCounter = 0;
 
   let postsCategories = [];
-  posts.forEach((post) => {
-      post.categories.forEach((cat) => {
-        postsCategories.push(cat);
-      })
-  })
-  let finalCategories = postsCategories.filter((cat,inx) => postsCategories.indexOf(cat) === inx);
-//   console.log(finalCategories);
- let popularCategoriesCounter = 0;
+  posts.forEach(post => {
+    post.categories.forEach(cat => {
+      postsCategories.push(cat);
+    });
+  });
+  let finalCategories = postsCategories.filter((cat, inx) => postsCategories.indexOf(cat) === inx);
+  //   console.log(finalCategories);
+  let popularCategoriesCounter = 0;
 
- const handleChange = (e) => {
-   const data = e.target.value;
-   setSearchVal(data);
-   blogFilter(data);
- }
+  const handleChange = e => {
+    const data = e.target.value;
+    setSearchVal(data);
+    blogFilter(data);
+  };
 
- const blogFilter = (val) => {
-    if(val === "" ) {
+  const blogFilter = val => {
+    if (val === '') {
       setShowPosts(posts);
       setErrorStaus(false);
-    }
-    else {
-      const updatedPosts = showPosts.filter((post) => post.title.toLowerCase().replace(/\s/g, "").includes(val.toLowerCase())).map(filteredPost => filteredPost);
+    } else {
+      const updatedPosts = showPosts.filter(post => post.title.toLowerCase().replace(/\s/g, '').includes(val.toLowerCase())).map(filteredPost => filteredPost);
       setShowPosts(updatedPosts);
-      if(updatedPosts.length <=0 ) {
+      if (updatedPosts.length <= 0) {
         setErrorStaus(true);
       }
     }
- }
+  };
   return (
-    <div className='site-content'>
-      <Pagetitle title='blog' crumbs={crumbs} bgImage="blog-pagetitle-bg.jpg"/>
+    <div>
+      <Pagetitle title='blog' crumbs={crumbs} bgImage='blog-pagetitle-bg.jpg' />
       <section className='blog-section section--padding'>
         <div className='container'>
           <div className='row'>
             <div className='col-12 col-md-8 col-lg-8'>
               <div className='blog__posts-wrapper'>
-                {errorStatus ? <h6 className="text--secondary text--center">Sorry, No match found!</h6> : null }
+                {errorStatus ? <h6 className='text--secondary text--center'>Sorry, No match found!</h6> : null}
                 <div className='row'>
                   {showPosts.reverse().map(post => (
                     <BlogPost key={post._id} data={post} />
@@ -81,14 +81,16 @@ function Blog() {
                 <h6 className='text--heading mb-3'>Popular Categories</h6>
                 <div className='blog__popular-categories'>
                   <div className='row mx-1'>
-                     {finalCategories.map((cat) => {
-                         if(popularCategoriesCounter < 7) {
-                            popularCategoriesCounter++;
-                            return (
-                                <Link to={`/blog/category=${cat.replace(/\s+/g, '-')}`} className='text-capitalize'>{cat}</Link> 
-                            );
-                         }
-                     })}
+                    {finalCategories.map(cat => {
+                      if (popularCategoriesCounter < 7) {
+                        popularCategoriesCounter++;
+                        return (
+                          <Link to={`/blog/category=${cat.replace(/\s+/g, '-')}`} className='text-capitalize'>
+                            {cat}
+                          </Link>
+                        );
+                      }
+                    })}
                   </div>
                 </div>
               </div>

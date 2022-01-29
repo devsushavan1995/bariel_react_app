@@ -1,13 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Fragment } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-function Layout() {
+function Layout(props) {
     return (
-        <div>
+        <Fragment>
             <Header />
+            <main className="site-content">{props.children}</main>
             <Footer />
-        </div>
+        </Fragment>
     )
 }
 

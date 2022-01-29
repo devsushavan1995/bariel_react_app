@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Thumbs } from 'swiper';
 import TestimonialsItem from './TestimonialsItem';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -8,6 +8,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 function Testimonials() {
+  // store thumbs swiper instance
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const testimonialsData = [
     {
       rating: 4.7,
@@ -39,10 +41,11 @@ function Testimonials() {
       <Swiper
         // install Swiper modules
         effect={'creative'}
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Thumbs]}
         spaceBetween={20}
         navigation={false}
         pagination={{ clickable: true }}
+        thumbs={{ swiper: thumbsSwiper }}
         breakpoints={{
           // when window width is >= 640px
           640: {
@@ -53,7 +56,7 @@ function Testimonials() {
           768: {
             width: 768,
             slidesPerView: 2,
-          }
+          },
         }}
       >
         <div className='swiper-wrapper'>

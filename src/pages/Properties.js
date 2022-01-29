@@ -52,7 +52,7 @@ function Properties() {
 
   }
   return (
-    <div className='site-content site-content--properties'>
+    <div className='site-content__properties'>
       <Pagetitle title='properties' crumbs={crumbs} bgImage="property-page-bg.jpg"/>
       <section className='section--padding'>
         <div className='container'>

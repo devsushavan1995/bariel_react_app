@@ -5,7 +5,7 @@ import '../css/Footer.css';
 
 function Footer() {
   return (
-    <div>
+    <>
       <footer className='site-footer'>
         <div className='site-footer__top bg--primary'>
           <Container>
@@ -81,7 +81,7 @@ function Footer() {
           <p className='text--light m-0 text-center'>© 2021 Bariel - Real Estate Theme by Sushavan Chakraborty</p>
         </div>
       </footer>
-    </div>
+    </>
   );
 }
 

@@ -1,5 +1,6 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
+import Layout from './pages/Layout';
 import Home from './pages/Home';
 import Properties from './pages/Properties';
 import Agents from './pages/Agents';
@@ -11,11 +12,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import BlogSingle from './pages/BlogSingle';
 import BlogCategoryArchive from './pages/BlogCategoryArchive';
+import SearchResult from './pages/SearchResult';
 
 function App() {
   return (
-    <div className='App'>
-      <Header/>
+    <Layout>
       <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
@@ -27,9 +28,9 @@ function App() {
           <Route path='/blog/:id' element={<BlogSingle />} />
           <Route path='/blog/category=:category' element={<BlogCategoryArchive />} />
           <Route path='contact-us' element={<Contact />} />
+          <Route path='/property-search' element={<SearchResult/>} />
         </Routes>
-        <Footer/>
-    </div>
+    </Layout>
   );
 }
 

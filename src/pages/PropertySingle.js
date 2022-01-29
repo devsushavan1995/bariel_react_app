@@ -30,9 +30,9 @@ function PropertySingle(props) {
   let propertyTitle = property.title;
   let setCountMaxRecentlyAddedItems = 3;
   let count = 0;
-  const agentInfo = agentsInfo.filter((agentSingle) => agentSingle._id === property.agentId);
+  const agentInfo = agentsInfo.filter(agentSingle => agentSingle._id === property.agentId);
   return (
-    <div className='property-single site-content'>
+    <div className='property-single'>
       <section className='property__top-overview bg--center bg--cover bg--no-repeat' style={{ backgroundImage: `url(/images/properties/${property.coverBg})` }}>
         <div className='overview__overlay'></div>
         <div className='overview__content'>
@@ -43,21 +43,21 @@ function PropertySingle(props) {
                 <i className='fas fa-bed'></i>
               </span>
               <span className='spec-item__text'>{property.noOfBeds}</span>
-              <span className="spec-item__title">Beds</span>
+              <span className='spec-item__title'>Beds</span>
             </li>
             <li className='overview__spec-item'>
               <span className='spec-item__icon'>
                 <i className='fas fa-bath'></i>
               </span>
               <span className='spec-item__text'>{property.noOfBathrooms}</span>
-              <span className="spec-item__title">Baths</span>
+              <span className='spec-item__title'>Baths</span>
             </li>
             <li className='overview__spec-item'>
               <span className='spec-item__icon'>
                 <i className='fas fa-home'></i>
               </span>
               <span className='spec-item__text'>{property.propertyArea}</span>
-              <span className="spec-item__title">sqft</span>
+              <span className='spec-item__title'>sqft</span>
             </li>
           </ul>
           <div className='overview__pricing d-flex justify-content-center align-items-center'>
@@ -90,7 +90,9 @@ function PropertySingle(props) {
                 className='mb-5'
               >
                 <div className='swiper-wrapper'>
-                  {property.gallery.map((slide)=> <PropertySingleSlide slide={slide}/>)}
+                  {property.gallery.map(slide => (
+                    <PropertySingleSlide slide={slide} />
+                  ))}
                 </div>
               </Swiper>
               <Tabs id='controlled-tab-example' defaultActiveKey='description' activeKey={key} onSelect={k => setKey(k)} className='mb-4'>
@@ -165,7 +167,7 @@ function PropertySingle(props) {
                     <h5 className='text--heading mt-5 mb-4'>More Features</h5>
                     <ul className='property-single__more-features'>
                       <div className='row'>
-                        {property.moreFeatures.map((feature) => (
+                        {property.moreFeatures.map(feature => (
                           <PropertyMoreFeatureSingle feature={feature} />
                         ))}
                       </div>
@@ -186,7 +188,7 @@ function PropertySingle(props) {
               <div className='agent-details-wrapper p-3 p-md-4 p-lg-5 bg--light'>
                 <div className='agent-profile-container'>
                   <div className='agent-profile__image'>
-                    <img src={`/images/agents/${agentInfo[0].image}`} alt='' className='mx-auto rounded-circle mb-4' width="200"/>
+                    <img src={`/images/agents/${agentInfo[0].image}`} alt='' className='mx-auto rounded-circle mb-4' width='200' />
                   </div>
                   <div className='agent-profile__content'>
                     <h5 className='agent-profile__title text--heading text-center mb-3'>{agentInfo[0].title}</h5>
@@ -214,7 +216,7 @@ function PropertySingle(props) {
                     </a>
                   </p>
                   <p className='agent-profile-cta'>
-                    <Link to="/contact-us" className='profile-cta__btn btn__primary d-block w-100 text-center'>
+                    <Link to='/contact-us' className='profile-cta__btn btn__primary d-block w-100 text-center'>
                       <span className='profile-cta__btn-icon'>
                         <i class='fas fa-envelope'></i>
                       </span>
@@ -232,12 +234,14 @@ function PropertySingle(props) {
           <p className='section__subheading text--secondary text--center text--lg-left'>More Properties</p>
           <h2 className='section__heading text--heading text--center text--lg-left'>Recently Added</h2>
           <div className='row'>
-            { propertiesInfo.filter((propa) => propa.title !== propertyTitle).map((property,index) => {
-              if(count < setCountMaxRecentlyAddedItems){
-                count++;
-                return <Property data={property} />; 
-              }
-            })}
+            {propertiesInfo
+              .filter(propa => propa.title !== propertyTitle)
+              .map((property, index) => {
+                if (count < setCountMaxRecentlyAddedItems) {
+                  count++;
+                  return <Property data={property} />;
+                }
+              })}
           </div>
         </div>
       </section>

@@ -55,12 +55,12 @@ button {
 }
 .btn__secondary {
   background: var(--colorSecondary);
-  color: #fff!important;
+  color: #fff !important;
   padding: 0.75rem 1.75rem;
 }
 .btn__light {
   background: #fff;
-  color: var(--colorPrimary)!important;
+  color: var(--colorPrimary) !important;
   padding: 0.75rem 1.75rem;
 }
 /* Typography */
@@ -74,28 +74,28 @@ h6 {
   font-weight: 700 !important;
 }
 h1 {
-  font-size: 2.75rem!important;
-  line-height: 1.15em!important;
+  font-size: 2.75rem !important;
+  line-height: 1.15em !important;
 }
 h2 {
-  font-size: 2.25rem!important;
-  line-height: 1.2em!important;
+  font-size: 2.25rem !important;
+  line-height: 1.2em !important;
 }
 h3 {
-  font-size: 2rem!important;
-  line-height: 1.2em!important;
+  font-size: 2rem !important;
+  line-height: 1.2em !important;
 }
 h4 {
-  font-size: 1.5rem!important;
-  line-height: 1.25em!important;
+  font-size: 1.5rem !important;
+  line-height: 1.25em !important;
 }
 h5 {
-  font-size: 1.35rem!important;
-  line-height: 1.35em!important;
+  font-size: 1.35rem !important;
+  line-height: 1.35em !important;
 }
 h6 {
-  font-size: 1.15rem!important;
-  line-height: 1.4em!important;
+  font-size: 1.15rem !important;
+  line-height: 1.4em !important;
 }
 p {
   font-size: 1rem;
@@ -105,54 +105,54 @@ p {
 }
 @media (min-width: 768px) {
   h1 {
-    font-size: 3.25rem!important;
-    line-height: 1.1em!important;
+    font-size: 3.25rem !important;
+    line-height: 1.1em !important;
   }
   h2 {
-    font-size: 2.65rem!important;
-    line-height: 1.15em!important;
+    font-size: 2.65rem !important;
+    line-height: 1.15em !important;
   }
   h3 {
-    font-size: 2.25rem!important;
-    line-height: 1.2em!important;
+    font-size: 2.25rem !important;
+    line-height: 1.2em !important;
   }
   h4 {
-    font-size: 1.65rem!important;
-    line-height: 1.3em!important;
+    font-size: 1.65rem !important;
+    line-height: 1.3em !important;
   }
   h5 {
-    font-size: 1.4rem!important;
-    line-height: 1.35em!important;
+    font-size: 1.4rem !important;
+    line-height: 1.35em !important;
   }
   h6 {
-    font-size: 1.2rem!important;
-    line-height: 1.4em!important;
+    font-size: 1.2rem !important;
+    line-height: 1.4em !important;
   }
 }
 @media (min-width: 1024px) {
   h1 {
-    font-size: 4rem!important;
-    line-height: 1.05em!important;
+    font-size: 4rem !important;
+    line-height: 1.05em !important;
   }
   h2 {
-    font-size: 3rem!important;
-    line-height: 1.1em!important;
+    font-size: 3rem !important;
+    line-height: 1.1em !important;
   }
   h3 {
-    font-size: 2.5rem!important;
-    line-height: 1.15em!important;
+    font-size: 2.5rem !important;
+    line-height: 1.15em !important;
   }
   h4 {
-    font-size: 1.875rem!important;
-    line-height: 1.25em!important;
+    font-size: 1.875rem !important;
+    line-height: 1.25em !important;
   }
   h5 {
-    font-size: 1.45rem!important;
-    line-height: 1.3em!important;
+    font-size: 1.45rem !important;
+    line-height: 1.3em !important;
   }
   h6 {
-    font-size: 1.25rem!important;
-    line-height: 1.4em!important;
+    font-size: 1.25rem !important;
+    line-height: 1.4em !important;
   }
 }
 
@@ -183,13 +183,13 @@ p {
   font-size: 0.9375rem;
 }
 .font--para {
-  font-family: var(--fontPara)!important;
+  font-family: var(--fontPara) !important;
 }
 .font--weight-500 {
-  font-weight: 500!important;
+  font-weight: 500 !important;
 }
 .font--weight-600 {
-  font-weight: 600!important;
+  font-weight: 600 !important;
 }
 .bg--light {
   background: var(--colorLightBg);
@@ -210,13 +210,13 @@ p {
   background: transparent;
 }
 .bg--center {
-  background-position: center center!important;
+  background-position: center center !important;
 }
 .bg--cover {
-  background-size: cover!important;
+  background-size: cover !important;
 }
 .bg--no-repeat {
-  background-repeat: no-repeat!important;
+  background-repeat: no-repeat !important;
 }
 .site-content {
   margin: 5rem 0 0 0;
@@ -244,12 +244,12 @@ p {
 }
 @media (min-width: 768px) {
   .text--md-left {
-    text-align: left!important;
+    text-align: left !important;
   }
 }
 @media (min-width: 992px) {
   .text--lg-left {
-    text-align: left!important;
+    text-align: left !important;
   }
 }
 /* Common slider or carousel paginaion styles */
@@ -270,4 +270,3 @@ p {
   overflow-y: hidden;
   white-space: nowrap;
 }
-

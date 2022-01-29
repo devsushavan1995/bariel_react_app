@@ -5,7 +5,7 @@ import '../css/Pages.css';
 function Contact() {
   const [crumbs, setCrumbs] = useState(['home', 'contact us']);
   return (
-    <div className='site-content site-content--contact-us'>
+    <div className='site-content__contact-us'>
       <Pagetitle title='contact us' crumbs={crumbs} bgImage="contact-pagetitle-bg.jpg"/>
       <section className='contact-us-section section--padding'>
         <div className='container'>
