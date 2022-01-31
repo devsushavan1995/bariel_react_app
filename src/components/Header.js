@@ -7,13 +7,20 @@ import SearchForm from './SearchForm';
 
 function Header() {
   const [show, setShow] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {setShow(false); console.log('hiding!');};
   const handleShow = () => setShow(true);
+ 
+  const onSearchFormSubmit = (e) => {
+    e.preventDefault();
+    handleClose();
+  }
+
   return (
     <>
       <header className='site-header bg-light text-center'>
-        <Navbar collapseOnSelect expand='lg' fixed='top' className='site-header__main-nav py-2 py-lg-3'>
+        <Navbar collapseOnSelect expand='lg' fixed='top' className='site-header__main-nav py-2 py-lg-3' expanded={expanded}>
           <Container className='d-flex justify-content-between'>
             <Navbar.Brand>
               <Link to='/'>
@@ -26,37 +33,37 @@ function Header() {
                   <i class='fas fa-search'></i>
                 </span>
               </button>
-              <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+              <Navbar.Toggle aria-controls='responsive-navbar-nav' onClick={() => setExpanded(expanded ? false : "expanded")} />
               <Navbar.Collapse id='responsive-navbar-nav' className='justify-content-center'>
                 <Nav>
                   <ul className='main-nav-menu d-lg-flex'>
                     <li className='main-nav-menu__item'>
-                      <NavLink exact activeClassName='active' to='/'>
+                      <NavLink exact activeClassName='active' to='/' onClick={() => setExpanded(false)}>
                         Home
                       </NavLink>
                     </li>
                     <li className='main-nav-menu__item'>
-                      <NavLink activeClassName='active' to='/properties'>
+                      <NavLink activeClassName='active' to='/properties' onClick={() => setExpanded(false)}>
                         Properties
                       </NavLink>
                     </li>
                     <li className='main-nav-menu__item'>
-                      <NavLink activeClassName='active' to='/agents'>
+                      <NavLink activeClassName='active' to='/agents' onClick={() => setExpanded(false)}>
                         Agents
                       </NavLink>
                     </li>
                     <li className='main-nav-menu__item'>
-                      <NavLink activeClassName='active' to='/about-us'>
+                      <NavLink activeClassName='active' to='/about-us' onClick={() => setExpanded(false)}>
                         About Us
                       </NavLink>
                     </li>
                     <li className='main-nav-menu__item'>
-                      <NavLink activeClassName='active' to='/blog'>
+                      <NavLink activeClassName='active' to='/blog' onClick={() => setExpanded(false)}>
                         Blog
                       </NavLink>
                     </li>
                     <li className='main-nav-menu__item'>
-                      <NavLink activeClassName='active' to='/contact-us'>
+                      <NavLink activeClassName='active' to='/contact-us' onClick={() => setExpanded(false)}>
                         Contact Us
                       </NavLink>
                     </li>
@@ -79,7 +86,7 @@ function Header() {
         </Offcanvas.Header>
         <Offcanvas.Body>
           {/* Search Form */}
-          <SearchForm/>
+          <SearchForm />
         </Offcanvas.Body>
       </Offcanvas>
     </>

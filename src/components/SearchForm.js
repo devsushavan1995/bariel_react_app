@@ -7,13 +7,14 @@ import { useNavigate } from 'react-router-dom';
 
 function SearchForm() {
   const [toggle, setToggle] = useState(false);
-  // const [user, setUser] = useState('');
+  const [user, setUser] = useState('');
   const {
     control,
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const [locationVal, setLocationVal] = useState({
     value: '',
     label: '',
@@ -143,7 +144,6 @@ function SearchForm() {
       pathname: '/property-search',
       search: `?${queryStr}`
     })
-
   };
   function objectToQueryString(obj) {
     var str = [];
