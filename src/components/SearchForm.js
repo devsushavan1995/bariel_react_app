@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 // const UserContext = createContext()
 
-function SearchForm() {
+function SearchForm(props) {
   const [toggle, setToggle] = useState(false);
   const [user, setUser] = useState('');
   const {
@@ -144,6 +144,9 @@ function SearchForm() {
       pathname: '/property-search',
       search: `?${queryStr}`
     })
+    if(data) {
+      props.afterSearch();
+    }
   };
   function objectToQueryString(obj) {
     var str = [];

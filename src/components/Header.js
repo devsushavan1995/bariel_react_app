@@ -86,7 +86,7 @@ function Header() {
         </Offcanvas.Header>
         <Offcanvas.Body>
           {/* Search Form */}
-          <SearchForm />
+          <SearchForm afterSearch={handleClose}/>
         </Offcanvas.Body>
       </Offcanvas>
     </>
