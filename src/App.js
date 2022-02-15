@@ -13,10 +13,12 @@ import Footer from './components/Footer';
 import BlogSingle from './pages/BlogSingle';
 import BlogCategoryArchive from './pages/BlogCategoryArchive';
 import SearchResult from './pages/SearchResult';
+import ScrollToTop from "react-scroll-to-top";
 
 function App() {
   return (
     <Layout>
+      <ScrollToTop smooth color={"#001238"} width={20} />
       <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
