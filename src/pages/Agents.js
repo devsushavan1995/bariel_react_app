@@ -12,7 +12,7 @@ function Agents() {
         <div className='container'>
           <div className='row'>
             {agentsInfo.map(agent => (
-              <Agent agent={agent} />
+              <Agent key={agent._id} agent={agent} />
             ))}
           </div>
         </div>

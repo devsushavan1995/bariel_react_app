@@ -1,26 +1,36 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Pagetitle from '../components/Pagetitle';
 import { posts } from '../data/blogPosts';
 
 function BlogSingle() {
+  const [post, showPost] = useState([]);
+  const [errorStatus, showErrorStatus] = useState(false);
   let { id } = useParams();
-  id = parseInt(id);
-  const [crumbs, setCrumbs] = useState(['home', 'blog', `${id}`]);
-  let post = posts.filter(x => {
-    if (x._id === id) {
-      return x;
+
+  useEffect(()=> {
+    if(posts.length > 0) {
+      let post = posts.find((post) => {
+        return post._id == id;
+      });
+      if(post) {
+        showPost(post);
+      }
+      else {
+        showErrorStatus(true);
+      }
     }
-  });
-  if (post) {
-    post = post[0];
-  }
-  //   console.log(post.title);
+    else {
+      showErrorStatus(true);
+    }
+  }, []);
+
   return (
     <div className='site-content site-content--blog-single'>
-      <Pagetitle title={post.title} crumbs={crumbs} />
+      <Pagetitle title={post.title} crumbs={['home', 'blog', id]} />
       <section className='section--padding'>
         <div className='container'>
+          {!errorStatus ? (
           <div className='row justify-content-center'>
             <div className='col-12 col-md-12 col-lg-10 col-xl-9'>
               <h3 className='text--heading post__title mb-5'>{post.title}</h3>
@@ -32,6 +42,7 @@ function BlogSingle() {
               </div>
             </div>
           </div>
+          ) : (<h6 className='text-danger'>Sorry, this post is removed.</h6>)}
         </div>
       </section>
     </div>

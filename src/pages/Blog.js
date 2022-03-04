@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Pagetitle from '../components/Pagetitle';
 import BlogPost from '../components/BlogPost';
 import { Link } from 'react-router-dom';
 import { posts } from '../data/blogPosts.js';
 function Blog() {
   const [crumbs, setCrumbs] = useState(['home', 'blog']);
-  const [showPosts, setShowPosts] = useState(posts);
+  const [showPosts, setShowPosts] = useState([]);
   const [searchVal, setSearchVal] = useState('');
   const [errorStatus, setErrorStaus] = useState(false);
+
+  useEffect(()=> {
+    if(!posts.length == 0) {
+      setShowPosts(posts);
+    }
+    else {
+      setErrorStaus(true);
+    }
+  },[]);
 
   let recentPostCounter = 0;
 
